@@ -139,7 +139,7 @@ td:first-child{color:var(--muted);font-weight:500}
 /* Lamps */
 .lamp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
 .lamp-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md)}
-.lamp-icon{width:36px;height:36px;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.lamp-icon{width:42px;height:42px;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
 .lamp-name{font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:2px}
 .lamp-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
 
