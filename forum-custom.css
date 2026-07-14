@@ -124,16 +124,24 @@ html, body {
   min-width: 180px !important;
   width: auto !important;
   overflow: visible !important;
-  padding: 8px 0 !important;
+  padding: 0 !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow) !important;
 }
 
-/* Nav items list */
+/* Nav items list container */
 .App-nav .nav,
 .SideNav-list,
 .sideNav-list,
 .sideNav .Dropdown-menu,
 .IndexPage-nav .Dropdown-menu {
   overflow: visible !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  background: transparent !important;
 }
 
 /* Main nav items */
@@ -141,18 +149,24 @@ html, body {
 .SideNav-list > li,
 .sideNav ul > li {
   overflow: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
+/* ===== NAV ITEM LINKS ===== */
 .App-nav .nav > li > a {
   color: var(--muted) !important;
   border-radius: var(--radius) !important;
-  padding: 8px 16px !important;
-  margin: 0 4px 2px 8px !important;
+  padding: 10px 16px !important;
+  margin: 0 0 2px 0 !important;
   font-weight: 500 !important;
   font-size: 0.88rem !important;
   transition: all 0.15s !important;
   overflow: visible !important;
   white-space: nowrap !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
 
 .App-nav .nav > li > a:hover {
