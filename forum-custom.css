@@ -105,47 +105,54 @@ html, body {
 }
 
 /* ===== SIDEBAR ===== */
-.SideNav, .sideNav {
+.SideNav, .sideNav, .sideNavContainer {
   background: transparent !important;
   overflow: visible !important;
 }
 
-.SideNav .Dropdown-menu, 
-.sideNav .Dropdown-menu,
-.nav > li > a {
-  background: transparent !important;
-}
-
-/* Fix sidebar clipping/overflow */
-.App-nav, .IndexPage-nav, .sideNav {
+/* Fix sidebar clipping/overflow - container */
+.sideNavContainer {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
   overflow: visible !important;
 }
 
+/* SideNav navigation panel */
+.IndexPage-nav.sideNav,
+.sideNav {
+  min-width: 180px !important;
+  width: auto !important;
+  overflow: visible !important;
+  padding: 8px 0 !important;
+}
+
+/* Nav items list */
 .App-nav .nav,
 .SideNav-list,
-.sideNav-list {
+.sideNav-list,
+.sideNav .Dropdown-menu,
+.IndexPage-nav .Dropdown-menu {
+  overflow: visible !important;
+}
+
+/* Main nav items */
+.App-nav .nav > li,
+.SideNav-list > li,
+.sideNav ul > li {
   overflow: visible !important;
 }
 
 .App-nav .nav > li > a {
   color: var(--muted) !important;
   border-radius: var(--radius) !important;
-  padding: 8px 12px 8px 16px !important;
-  margin-left: 4px !important;
+  padding: 8px 16px !important;
+  margin: 0 4px 2px 8px !important;
   font-weight: 500 !important;
+  font-size: 0.88rem !important;
   transition: all 0.15s !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
   overflow: visible !important;
   white-space: nowrap !important;
-}
-
-.App-nav .nav > li > a .icon,
-.App-nav .nav > li > a i,
-.App-nav .nav > li > a .Button-icon {
-  flex-shrink: 0 !important;
-  margin-right: 6px !important;
 }
 
 .App-nav .nav > li > a:hover {
@@ -156,21 +163,80 @@ html, body {
 .App-nav .nav > li.active > a {
   color: var(--accent) !important;
   background: var(--accent-dim) !important;
-  border-right: 2px solid var(--accent);
+  border-left: 2px solid var(--accent) !important;
 }
 
-/* SideNav panel container */
-.SideNav, .IndexPage-nav {
-  min-width: 0 !important;
-  padding-left: 8px !important;
+/* ===== SIDENAV DROPDOWN (for extension nav items) ===== */
+/* Fix the dropdown menu that holds extra nav items */
+.Dropdown-menu.dropdown-menu,
+.App-titleControl .Dropdown-menu,
+.App-nav .Dropdown-menu {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+  padding: 4px !important;
+  min-width: 200px !important;
+  overflow: visible !important;
+  left: auto !important;
+  right: auto !important;
 }
 
-/* Ensure full visibility on mobile */
-@media (max-width: 767px) {
-  .App-nav .nav > li > a {
-    padding: 10px 12px 10px 20px !important;
-    margin-left: 0 !important;
-  }
+.Dropdown-menu.dropdown-menu li,
+.App-titleControl .Dropdown-menu li {
+  overflow: visible !important;
+}
+
+.Dropdown-menu.dropdown-menu li > a,
+.App-titleControl .Dropdown-menu li > a,
+.App-nav .Dropdown-menu li > a {
+  color: var(--muted) !important;
+  padding: 10px 16px !important;
+  border-radius: var(--radius-sm) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.Dropdown-menu.dropdown-menu li > a:hover,
+.App-titleControl .Dropdown-menu li > a:hover {
+  color: var(--text) !important;
+  background: var(--surface-2) !important;
+}
+
+/* Colored indicator bars in dropdown */
+.Dropdown-menu li a .icon,
+.Dropdown-menu li a i,
+.Dropdown-menu li a:before {
+  flex-shrink: 0 !important;
+}
+
+.Dropdown-menu li.active > a,
+.App-titleControl .Dropdown-menu li.active > a {
+  color: var(--accent) !important;
+  background: var(--accent-dim) !important;
+}
+
+/* ===== SIDE NAV DROPDOWN BUTTON (title) ===== */
+.App-titleControl .Dropdown-toggle,
+.ButtonGroup.Dropdown.App-titleControl .Dropdown-toggle {
+  color: var(--text) !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  border-radius: var(--radius) !important;
+  padding: 6px 12px !important;
+  overflow: visible !important;
+}
+
+.App-titleControl .Dropdown-toggle:hover {
+  background: var(--surface-2) !important;
+}
+
+/* Fix for colored tag icons in nav */
+.item-nav .Dropdown-menu li a[style*="color"] {
+  padding-left: 12px !important;
 }
 
 /* ===== BUTTONS ===== */
