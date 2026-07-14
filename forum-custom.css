@@ -1,211 +1,68 @@
 /* =============================================
    MG S5 EV Forum — Custom CSS for Flarum
    Match theme with mgs5.web.id
-   Paste this in Admin → Appearance → Custom Styles
-   Also enable: Dark Mode, Colored Header
-   Primary Color: #22c55e
+   Paste in Admin → Appearance → Custom Styles
+   
+   ⚠️ Atur di Admin Panel:
+   - Primary Color: #22c55e
+   - Dark Mode: ON
+   - Colored Header: ON
    ============================================= */
 
-/* ===== FONT ===== */
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ===== VARIABLES OVERRIDE ===== */
+/* ===== VARS ===== */
 :root {
-  --bg: #0a0a0c;
-  --surface: #141417;
-  --surface-2: #1c1c21;
-  --surface-hover: #222228;
-  --border: #2a2a30;
-  --text: #e8e8ed;
-  --text-secondary: #a1a1aa;
-  --muted: #8e8e96;
-  --muted-more: #5c5c64;
   --accent: #22c55e;
   --accent-hover: #16a34a;
   --accent-dim: rgba(34, 197, 94, 0.12);
   --accent-glow: rgba(34, 197, 94, 0.25);
-  --danger: #ef4444;
-  --warning: #eab308;
+  --bg: #0a0a0c;
+  --surface: #141417;
+  --surface-2: #1c1c21;
+  --border: #2a2a30;
+  --text: #e8e8ed;
+  --text-sec: #a1a1aa;
+  --muted: #8e8e96;
+  --muted-more: #5c5c64;
   --radius: 8px;
-  --radius-sm: 6px;
   --radius-xl: 12px;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow: 0 1px 3px rgba(0,0,0,.3);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,.4);
+  --font: 'Inter', system-ui, sans-serif;
 }
 
 /* ===== BASE ===== */
-html, body {
+body, html {
   background: var(--bg) !important;
   color: var(--text) !important;
   font-family: var(--font) !important;
-  font-size: 14px;
-  line-height: 1.6;
-  scrollbar-color: var(--border) var(--bg);
 }
 
-::selection {
-  background: var(--accent-dim);
-  color: #fff;
-}
+::selection { background: var(--accent-dim); color: #fff; }
 
-/* ===== HEADER / NAVBAR ===== */
-.App-header, .Header, .App-primaryControl {
+/* ===== HEADER ===== */
+.App-header, .Header {
   background: #0d0d10 !important;
   border-bottom: 1px solid var(--border) !important;
-  box-shadow: none !important;
 }
 
-.Header-logo {
-  filter: brightness(0) invert(1) !important;
-}
+.Header-logo { filter: brightness(0) invert(1) !important; }
 
-.Header-logo, .Header-title {
-  color: var(--text) !important;
-  font-weight: 700 !important;
-  font-size: 1.1rem !important;
-}
-
-.Header-primary .Button--flat, 
-.Header-secondary .Button--flat {
-  color: var(--muted) !important;
-  background: transparent !important;
-  border-radius: var(--radius) !important;
-  font-weight: 500 !important;
-  padding: 6px 12px !important;
-}
-
-.Header-primary .Button--flat:hover,
-.Header-secondary .Button--flat:hover {
-  color: var(--text) !important;
-  background: var(--surface-2) !important;
-}
-
-.Header-secondary .Button--flat:last-child {
-  color: var(--accent) !important;
-  background: var(--accent-dim) !important;
-  border: 1px solid rgba(34, 197, 94, 0.2) !important;
-}
-
-.Header-secondary .Button--flat:last-child:hover {
-  background: rgba(34, 197, 94, 0.2) !important;
-}
-
-/* Search bar */
-.Search-input {
-  background: var(--surface-2) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 100px !important;
-  color: var(--text) !important;
-}
-
-.Search-input:focus {
-  border-color: var(--accent) !important;
-  box-shadow: 0 0 0 2px var(--accent-dim) !important;
-}
-
-/* ===== SIDEBAR ===== */
+/* ===== SIDEBAR NAV ===== */
 .SideNav, .sideNav, .sideNavContainer {
   background: transparent !important;
-  overflow: visible !important;
 }
 
-/* Sidebar container: separate Start Discussion button from nav card */
-.sideNavContainer {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  gap: 12px !important;
-  overflow: visible !important;
-}
-
-/* ===== START A DISCUSSION BUTTON ===== */
-.sideNavContainer .Button--primary,
-.Button--primary[aria-label="Start a Discussion"] {
-  background: var(--accent) !important;
-  color: #000 !important;
-  font-weight: 700 !important;
-  font-size: 0.9rem !important;
-  padding: 12px 20px !important;
-  border-radius: 100px !important;
-  border: none !important;
-  width: 100% !important;
-  text-align: center !important;
-  box-shadow: var(--shadow) !important;
-  transition: all 0.15s !important;
-  margin-bottom: 0 !important;
-}
-
-.sideNavContainer .Button--primary:hover {
-  background: var(--accent-hover) !important;
-  box-shadow: 0 0 12px var(--accent-glow) !important;
-}
-
-/* ===== SIDEBAR NAV CARD ===== */
-.IndexPage-nav.sideNav,
-.sideNav:not(.Dropdown-menu) {
-  min-width: 220px !important;
-  width: auto !important;
-  max-width: 260px !important;
-  overflow: visible !important;
-  padding: 0 !important;
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-xl) !important;
-  box-shadow: var(--shadow) !important;
-}
-
-/* Nav items list - the actual menu inside the card */
-.App-nav .nav,
-.sideNav:not(.Dropdown-menu) ul.nav,
-.SideNav-list {
-  overflow: visible !important;
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 8px !important;
-  background: transparent !important;
-}
-
-.App-nav .nav > li,
-.SideNav-list > li,
-.sideNav:not(.Dropdown-menu) ul.nav > li {
-  overflow: visible !important;
-  margin: 0 0 2px 0 !important;
-  padding: 0 !important;
-}
-
-/* ===== NAV ITEM LINKS ===== */
+/* Nav items */
 .App-nav .nav > li > a {
   color: var(--muted) !important;
   border-radius: var(--radius) !important;
-  padding: 10px 14px !important;
-  margin: 0 !important;
+  padding: 8px 12px !important;
   font-weight: 500 !important;
   font-size: 0.88rem !important;
-  line-height: 1.4 !important;
-  transition: all 0.15s ease !important;
-  overflow: visible !important;
-  white-space: nowrap !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  text-decoration: none !important;
-}
-
-/* Icon sizing & alignment */
-.App-nav .nav > li > a .icon,
-.App-nav .nav > li > a i,
-.App-nav .nav > li > a .Button-icon,
-.App-nav .nav > li > a > svg,
-.App-nav .nav > li > a img {
-  width: 18px !important;
-  height: 18px !important;
-  flex-shrink: 0 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 16px !important;
-  line-height: 1 !important;
+  transition: all .15s !important;
 }
 
 .App-nav .nav > li > a:hover {
@@ -213,102 +70,18 @@ html, body {
   background: var(--surface-2) !important;
 }
 
-/* Active item */
-.App-nav .nav > li.active > a,
-.App-nav .nav > li > a.active {
+.App-nav .nav > li.active > a {
   color: var(--accent) !important;
   background: var(--accent-dim) !important;
-  font-weight: 600 !important;
-  border-left: 3px solid var(--accent) !important;
-  padding-left: 11px !important; /* 14px - 3px border compensation */
-}
-
-/* ===== SIDENAV DROPDOWN (for extension nav items) ===== */
-/* Fix the dropdown menu that holds extra nav items */
-.Dropdown-menu.dropdown-menu,
-.App-titleControl .Dropdown-menu,
-.App-nav .Dropdown-menu {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-xl) !important;
-  box-shadow: var(--shadow-lg) !important;
-  padding: 4px !important;
-  min-width: 200px !important;
-  overflow: visible !important;
-  left: auto !important;
-  right: auto !important;
-}
-
-.Dropdown-menu.dropdown-menu li,
-.App-titleControl .Dropdown-menu li {
-  overflow: visible !important;
-}
-
-.Dropdown-menu.dropdown-menu li > a,
-.App-titleControl .Dropdown-menu li > a,
-.App-nav .Dropdown-menu li > a {
-  color: var(--muted) !important;
-  padding: 10px 16px !important;
-  border-radius: var(--radius-sm) !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  overflow: visible !important;
-  white-space: nowrap !important;
-}
-
-.Dropdown-menu.dropdown-menu li > a:hover,
-.App-titleControl .Dropdown-menu li > a:hover {
-  color: var(--text) !important;
-  background: var(--surface-2) !important;
-}
-
-/* Colored indicator bars in dropdown */
-.Dropdown-menu li a .icon,
-.Dropdown-menu li a i,
-.Dropdown-menu li a:before {
-  flex-shrink: 0 !important;
-}
-
-.Dropdown-menu li.active > a,
-.App-titleControl .Dropdown-menu li.active > a {
-  color: var(--accent) !important;
-  background: var(--accent-dim) !important;
-}
-
-/* ===== SIDE NAV DROPDOWN BUTTON (title) ===== */
-.App-titleControl .Dropdown-toggle,
-.ButtonGroup.Dropdown.App-titleControl .Dropdown-toggle {
-  color: var(--text) !important;
-  font-weight: 600 !important;
-  background: transparent !important;
-  border-radius: var(--radius) !important;
-  padding: 6px 12px !important;
-  overflow: visible !important;
-}
-
-.App-titleControl .Dropdown-toggle:hover {
-  background: var(--surface-2) !important;
-}
-
-/* Fix for colored tag icons in nav */
-.item-nav .Dropdown-menu li a[style*="color"] {
-  padding-left: 12px !important;
 }
 
 /* ===== BUTTONS ===== */
-.Button {
-  font-family: var(--font) !important;
-  border-radius: var(--radius) !important;
-  font-weight: 600 !important;
-  transition: all 0.15s ease !important;
-}
+.Button { font-family: var(--font) !important; border-radius: var(--radius) !important; font-weight: 600 !important; }
 
 .Button--primary {
   background: var(--accent) !important;
   color: #000 !important;
   border: none !important;
-  box-shadow: none !important;
 }
 
 .Button--primary:hover {
@@ -316,37 +89,27 @@ html, body {
   box-shadow: 0 0 12px var(--accent-glow) !important;
 }
 
-/* ===== DISCUSSION LIST ===== */
+/* ===== DISCUSSION CARDS ===== */
 .DiscussionListItem {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-xl) !important;
   margin-bottom: 8px !important;
-  transition: all 0.15s !important;
   box-shadow: var(--shadow) !important;
 }
 
 .DiscussionListItem:hover {
-  border-color: var(--accent-glow) !important;
-  background: var(--surface-2) !important;
-  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--accent-dim) !important;
 }
 
 .DiscussionListItem-title {
   color: var(--text) !important;
   font-weight: 600 !important;
-  font-size: 1rem !important;
 }
 
 .DiscussionListItem-info, .DiscussionListItem-author {
   color: var(--muted) !important;
   font-size: 0.82rem !important;
-}
-
-.DiscussionListItem-count {
-  color: var(--accent) !important;
-  font-weight: 700 !important;
-  font-size: 0.85rem !important;
 }
 
 /* ===== POSTS ===== */
@@ -358,49 +121,7 @@ html, body {
   box-shadow: var(--shadow) !important;
 }
 
-.Post-header {
-  color: var(--text) !important;
-}
-
-.Post-user, .PostUser-name {
-  color: var(--text) !important;
-  font-weight: 600 !important;
-}
-
-.Post-body {
-  color: var(--text-secondary) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.7 !important;
-}
-
-.Post time {
-  color: var(--muted-more) !important;
-  font-size: 0.78rem !important;
-}
-
-/* ===== COMPOSER ===== */
-.Composer, .Composer-body {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
-}
-
-.Composer-header {
-  border-bottom: 1px solid var(--border) !important;
-}
-
-.TextEditor {
-  background: var(--bg) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  color: var(--text) !important;
-}
-
-.TextEditor textarea {
-  color: var(--text) !important;
-  font-family: var(--font) !important;
-}
+.Post-body { color: var(--text-sec) !important; }
 
 /* ===== DROPDOWNS ===== */
 .Dropdown-menu {
@@ -411,8 +132,8 @@ html, body {
 }
 
 .Dropdown-menu li > a {
-  color: var(--text-secondary) !important;
-  padding: 8px 16px !important;
+  color: var(--text-sec) !important;
+  border-radius: var(--radius) !important;
 }
 
 .Dropdown-menu li > a:hover {
@@ -420,26 +141,21 @@ html, body {
   background: var(--surface-2) !important;
 }
 
-/* ===== MODALS ===== */
-.Modal-backdrop {
-  background: rgba(0, 0, 0, 0.7) !important;
+/* ===== COMPOSER ===== */
+.Composer, .Composer-body {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important;
 }
 
+/* ===== MODALS ===== */
 .Modal-content {
   background: var(--surface) !important;
   border: 1px solid var(--border) !important;
   border-radius: var(--radius-xl) !important;
-  box-shadow: var(--shadow-lg) !important;
 }
 
-.Modal-header {
-  border-bottom: 1px solid var(--border) !important;
-  color: var(--text) !important;
-}
-
-.Modal-footer {
-  border-top: 1px solid var(--border) !important;
-}
+.Modal-header { border-bottom: 1px solid var(--border) !important; }
 
 /* ===== FORMS ===== */
 .FormControl {
@@ -455,25 +171,10 @@ html, body {
   box-shadow: 0 0 0 2px var(--accent-dim) !important;
 }
 
-/* ===== BADGES ===== */
-.Badge {
-  border-radius: var(--radius-sm) !important;
-}
-
-/* ===== HERO SECTION (category header) ===== */
+/* ===== HERO ===== */
 .Hero {
   background: var(--surface) !important;
   border-bottom: 1px solid var(--border) !important;
-  color: var(--text) !important;
-}
-
-.Hero h2 {
-  color: var(--text) !important;
-  font-weight: 700 !important;
-}
-
-.Hero p {
-  color: var(--muted) !important;
 }
 
 /* ===== FOOTER ===== */
@@ -483,144 +184,14 @@ html, body {
   font-size: 0.8rem !important;
 }
 
-.App-footer a, footer a {
-  color: var(--accent) !important;
-}
+.App-footer a, footer a { color: var(--accent) !important; }
 
 /* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--muted-more);
-}
-
-/* ===== MISC ===== */
-hr {
-  border-color: var(--border) !important;
-}
-
-blockquote {
-  border-left: 3px solid var(--accent) !important;
-  background: var(--accent-dim) !important;
-  color: var(--text-secondary) !important;
-  padding: 8px 16px !important;
-  border-radius: 0 var(--radius) var(--radius) 0 !important;
-}
-
-code {
-  background: var(--surface-2) !important;
-  color: var(--accent) !important;
-  border-radius: 4px !important;
-  padding: 2px 6px !important;
-  font-size: 0.85em !important;
-}
-
-pre {
-  background: var(--surface-2) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  color: var(--text) !important;
-}
-
-/* ===== NEW DISCUSSION BUTTON HOVER GLOW ===== */
-.Button--primary:active {
-  transform: scale(0.98) !important;
-}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-more); }
 
 /* ===== ALERTS ===== */
-.Alert {
-  border-radius: var(--radius) !important;
-  border: none !important;
-}
-
-.Alert--success {
-  background: rgba(34, 197, 94, 0.15) !important;
-  color: var(--accent) !important;
-}
-
-.Alert--error {
-  background: rgba(239, 68, 68, 0.15) !important;
-  color: var(--danger) !important;
-}
-
-/* ===== USER CARD / AVATAR ===== */
-.Avatar {
-  border-radius: 50% !important;
-  border: 2px solid var(--border) !important;
-}
-
-.UserCard {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-xl) !important;
-  box-shadow: var(--shadow) !important;
-}
-
-.UserCard-info {
-  color: var(--muted) !important;
-}
-
-/* ===== LOADING SPINNER ===== */
-.LoadingIndicator {
-  color: var(--accent) !important;
-}
-
-/* ===== TOOLTIP ===== */
-.Tooltip {
-  font-family: var(--font) !important;
-}
-
-/* ===== CATEGORY NAVIGATION ===== */
-.SideNav .Button--link, 
-.Dropdown--navigation .Button {
-  color: var(--muted) !important;
-}
-
-.SideNav .Button--link:hover {
-  color: var(--text) !important;
-  background: var(--surface-2) !important;
-}
-
-/* ===== SEARCH RESULTS ===== */
-.Search-results {
-  background: var(--surface) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: var(--radius-xl) !important;
-  box-shadow: var(--shadow-lg) !important;
-}
-
-.Search-result-item {
-  color: var(--text) !important;
-}
-
-.Search-result-item:hover {
-  background: var(--surface-2) !important;
-}
-
-/* ===== INDEX PAGE TOOLBAR ===== */
-.IndexPage-toolbar {
-  margin-bottom: 12px !important;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 767px) {
-  .DiscussionListItem {
-    border-radius: var(--radius) !important;
-  }
-  
-  .Post {
-    border-radius: var(--radius) !important;
-  }
-}
+.Alert--success { background: rgba(34,197,94,.15) !important; color: var(--accent) !important; }
+.Alert--error { background: rgba(239,68,68,.15) !important; color: #ef4444 !important; }
