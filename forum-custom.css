@@ -1,0 +1,512 @@
+/* =============================================
+   MG S5 EV Forum — Custom CSS for Flarum
+   Match theme with mgs5.web.id
+   Paste this in Admin → Appearance → Custom Styles
+   Also enable: Dark Mode, Colored Header
+   Primary Color: #22c55e
+   ============================================= */
+
+/* ===== FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== VARIABLES OVERRIDE ===== */
+:root {
+  --bg: #0a0a0c;
+  --surface: #141417;
+  --surface-2: #1c1c21;
+  --surface-hover: #222228;
+  --border: #2a2a30;
+  --text: #e8e8ed;
+  --text-secondary: #a1a1aa;
+  --muted: #8e8e96;
+  --muted-more: #5c5c64;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+  --accent-dim: rgba(34, 197, 94, 0.12);
+  --accent-glow: rgba(34, 197, 94, 0.25);
+  --danger: #ef4444;
+  --warning: #eab308;
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-xl: 12px;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== BASE ===== */
+html, body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  font-size: 14px;
+  line-height: 1.6;
+  scrollbar-color: var(--border) var(--bg);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: #fff;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+.App-header, .Header, .App-primaryControl {
+  background: #0d0d10 !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+.Header-logo {
+  filter: brightness(0) invert(1) !important;
+}
+
+.Header-logo, .Header-title {
+  color: var(--text) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+}
+
+.Header-primary .Button--flat, 
+.Header-secondary .Button--flat {
+  color: var(--muted) !important;
+  background: transparent !important;
+  border-radius: var(--radius) !important;
+  font-weight: 500 !important;
+  padding: 6px 12px !important;
+}
+
+.Header-primary .Button--flat:hover,
+.Header-secondary .Button--flat:hover {
+  color: var(--text) !important;
+  background: var(--surface-2) !important;
+}
+
+.Header-secondary .Button--flat:last-child {
+  color: var(--accent) !important;
+  background: var(--accent-dim) !important;
+  border: 1px solid rgba(34, 197, 94, 0.2) !important;
+}
+
+.Header-secondary .Button--flat:last-child:hover {
+  background: rgba(34, 197, 94, 0.2) !important;
+}
+
+/* Search bar */
+.Search-input {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 100px !important;
+  color: var(--text) !important;
+}
+
+.Search-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-dim) !important;
+}
+
+/* ===== SIDEBAR ===== */
+.SideNav, .sideNav {
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+.SideNav .Dropdown-menu, 
+.sideNav .Dropdown-menu,
+.nav > li > a {
+  background: transparent !important;
+}
+
+/* Fix sidebar clipping/overflow */
+.App-nav, .IndexPage-nav, .sideNav {
+  overflow: visible !important;
+}
+
+.App-nav .nav,
+.SideNav-list,
+.sideNav-list {
+  overflow: visible !important;
+}
+
+.App-nav .nav > li > a {
+  color: var(--muted) !important;
+  border-radius: var(--radius) !important;
+  padding: 8px 12px 8px 16px !important;
+  margin-left: 4px !important;
+  font-weight: 500 !important;
+  transition: all 0.15s !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.App-nav .nav > li > a .icon,
+.App-nav .nav > li > a i,
+.App-nav .nav > li > a .Button-icon {
+  flex-shrink: 0 !important;
+  margin-right: 6px !important;
+}
+
+.App-nav .nav > li > a:hover {
+  color: var(--text) !important;
+  background: var(--surface-2) !important;
+}
+
+.App-nav .nav > li.active > a {
+  color: var(--accent) !important;
+  background: var(--accent-dim) !important;
+  border-right: 2px solid var(--accent);
+}
+
+/* SideNav panel container */
+.SideNav, .IndexPage-nav {
+  min-width: 0 !important;
+  padding-left: 8px !important;
+}
+
+/* Ensure full visibility on mobile */
+@media (max-width: 767px) {
+  .App-nav .nav > li > a {
+    padding: 10px 12px 10px 20px !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* ===== BUTTONS ===== */
+.Button {
+  font-family: var(--font) !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.15s ease !important;
+}
+
+.Button--primary {
+  background: var(--accent) !important;
+  color: #000 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.Button--primary:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 0 12px var(--accent-glow) !important;
+}
+
+/* Start a Discussion button */
+.Button--primary[aria-label="Start a Discussion"] {
+  background: var(--accent) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+  border-radius: 100px !important;
+}
+
+/* ===== DISCUSSION LIST ===== */
+.DiscussionListItem {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  margin-bottom: 8px !important;
+  transition: all 0.15s !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.DiscussionListItem:hover {
+  border-color: var(--accent-glow) !important;
+  background: var(--surface-2) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.DiscussionListItem-title {
+  color: var(--text) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+.DiscussionListItem-info, .DiscussionListItem-author {
+  color: var(--muted) !important;
+  font-size: 0.82rem !important;
+}
+
+.DiscussionListItem-count {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+}
+
+/* ===== POSTS ===== */
+.Post {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  margin-bottom: 12px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.Post-header {
+  color: var(--text) !important;
+}
+
+.Post-user, .PostUser-name {
+  color: var(--text) !important;
+  font-weight: 600 !important;
+}
+
+.Post-body {
+  color: var(--text-secondary) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.7 !important;
+}
+
+.Post time {
+  color: var(--muted-more) !important;
+  font-size: 0.78rem !important;
+}
+
+/* ===== COMPOSER ===== */
+.Composer, .Composer-body {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+.Composer-header {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+.TextEditor {
+  background: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+}
+
+.TextEditor textarea {
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+}
+
+/* ===== DROPDOWNS ===== */
+.Dropdown-menu {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.Dropdown-menu li > a {
+  color: var(--text-secondary) !important;
+  padding: 8px 16px !important;
+}
+
+.Dropdown-menu li > a:hover {
+  color: var(--text) !important;
+  background: var(--surface-2) !important;
+}
+
+/* ===== MODALS ===== */
+.Modal-backdrop {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.Modal-content {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.Modal-header {
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+.Modal-footer {
+  border-top: 1px solid var(--border) !important;
+}
+
+/* ===== FORMS ===== */
+.FormControl {
+  background: var(--bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+}
+
+.FormControl:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-dim) !important;
+}
+
+/* ===== BADGES ===== */
+.Badge {
+  border-radius: var(--radius-sm) !important;
+}
+
+/* ===== HERO SECTION (category header) ===== */
+.Hero {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border) !important;
+  color: var(--text) !important;
+}
+
+.Hero h2 {
+  color: var(--text) !important;
+  font-weight: 700 !important;
+}
+
+.Hero p {
+  color: var(--muted) !important;
+}
+
+/* ===== FOOTER ===== */
+.App-footer, footer {
+  border-top: 1px solid var(--border) !important;
+  color: var(--muted-more) !important;
+  font-size: 0.8rem !important;
+}
+
+.App-footer a, footer a {
+  color: var(--accent) !important;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-more);
+}
+
+/* ===== MISC ===== */
+hr {
+  border-color: var(--border) !important;
+}
+
+blockquote {
+  border-left: 3px solid var(--accent) !important;
+  background: var(--accent-dim) !important;
+  color: var(--text-secondary) !important;
+  padding: 8px 16px !important;
+  border-radius: 0 var(--radius) var(--radius) 0 !important;
+}
+
+code {
+  background: var(--surface-2) !important;
+  color: var(--accent) !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-size: 0.85em !important;
+}
+
+pre {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  color: var(--text) !important;
+}
+
+/* ===== NEW DISCUSSION BUTTON HOVER GLOW ===== */
+.Button--primary:active {
+  transform: scale(0.98) !important;
+}
+
+/* ===== ALERTS ===== */
+.Alert {
+  border-radius: var(--radius) !important;
+  border: none !important;
+}
+
+.Alert--success {
+  background: rgba(34, 197, 94, 0.15) !important;
+  color: var(--accent) !important;
+}
+
+.Alert--error {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: var(--danger) !important;
+}
+
+/* ===== USER CARD / AVATAR ===== */
+.Avatar {
+  border-radius: 50% !important;
+  border: 2px solid var(--border) !important;
+}
+
+.UserCard {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.UserCard-info {
+  color: var(--muted) !important;
+}
+
+/* ===== LOADING SPINNER ===== */
+.LoadingIndicator {
+  color: var(--accent) !important;
+}
+
+/* ===== TOOLTIP ===== */
+.Tooltip {
+  font-family: var(--font) !important;
+}
+
+/* ===== CATEGORY NAVIGATION ===== */
+.SideNav .Button--link, 
+.Dropdown--navigation .Button {
+  color: var(--muted) !important;
+}
+
+.SideNav .Button--link:hover {
+  color: var(--text) !important;
+  background: var(--surface-2) !important;
+}
+
+/* ===== SEARCH RESULTS ===== */
+.Search-results {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.Search-result-item {
+  color: var(--text) !important;
+}
+
+.Search-result-item:hover {
+  background: var(--surface-2) !important;
+}
+
+/* ===== INDEX PAGE TOOLBAR ===== */
+.IndexPage-toolbar {
+  margin-bottom: 12px !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .DiscussionListItem {
+    border-radius: var(--radius) !important;
+  }
+  
+  .Post {
+    border-radius: var(--radius) !important;
+  }
+}
