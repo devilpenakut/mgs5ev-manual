@@ -110,19 +110,43 @@ html, body {
   overflow: visible !important;
 }
 
-/* Fix sidebar clipping/overflow - container */
+/* Sidebar container: separate Start Discussion button from nav card */
 .sideNavContainer {
   display: flex !important;
-  align-items: flex-start !important;
-  gap: 16px !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 12px !important;
   overflow: visible !important;
 }
 
-/* SideNav navigation panel */
+/* ===== START A DISCUSSION BUTTON ===== */
+.sideNavContainer .Button--primary,
+.Button--primary[aria-label="Start a Discussion"] {
+  background: var(--accent) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  padding: 12px 20px !important;
+  border-radius: 100px !important;
+  border: none !important;
+  width: 100% !important;
+  text-align: center !important;
+  box-shadow: var(--shadow) !important;
+  transition: all 0.15s !important;
+  margin-bottom: 0 !important;
+}
+
+.sideNavContainer .Button--primary:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 0 12px var(--accent-glow) !important;
+}
+
+/* ===== SIDEBAR NAV CARD ===== */
 .IndexPage-nav.sideNav,
-.sideNav {
-  min-width: 180px !important;
+.sideNav:not(.Dropdown-menu) {
+  min-width: 220px !important;
   width: auto !important;
+  max-width: 260px !important;
   overflow: visible !important;
   padding: 0 !important;
   background: var(--surface) !important;
@@ -131,12 +155,10 @@ html, body {
   box-shadow: var(--shadow) !important;
 }
 
-/* Nav items list container */
+/* Nav items list - the actual menu inside the card */
 .App-nav .nav,
-.SideNav-list,
-.sideNav-list,
-.sideNav .Dropdown-menu,
-.IndexPage-nav .Dropdown-menu {
+.sideNav:not(.Dropdown-menu) ul.nav,
+.SideNav-list {
   overflow: visible !important;
   list-style: none !important;
   margin: 0 !important;
@@ -144,12 +166,11 @@ html, body {
   background: transparent !important;
 }
 
-/* Main nav items */
 .App-nav .nav > li,
 .SideNav-list > li,
-.sideNav ul > li {
+.sideNav:not(.Dropdown-menu) ul.nav > li {
   overflow: visible !important;
-  margin: 0 !important;
+  margin: 0 0 2px 0 !important;
   padding: 0 !important;
 }
 
@@ -157,16 +178,34 @@ html, body {
 .App-nav .nav > li > a {
   color: var(--muted) !important;
   border-radius: var(--radius) !important;
-  padding: 10px 16px !important;
-  margin: 0 0 2px 0 !important;
+  padding: 10px 14px !important;
+  margin: 0 !important;
   font-weight: 500 !important;
   font-size: 0.88rem !important;
-  transition: all 0.15s !important;
+  line-height: 1.4 !important;
+  transition: all 0.15s ease !important;
   overflow: visible !important;
   white-space: nowrap !important;
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
+  text-decoration: none !important;
+}
+
+/* Icon sizing & alignment */
+.App-nav .nav > li > a .icon,
+.App-nav .nav > li > a i,
+.App-nav .nav > li > a .Button-icon,
+.App-nav .nav > li > a > svg,
+.App-nav .nav > li > a img {
+  width: 18px !important;
+  height: 18px !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
 }
 
 .App-nav .nav > li > a:hover {
@@ -174,10 +213,14 @@ html, body {
   background: var(--surface-2) !important;
 }
 
-.App-nav .nav > li.active > a {
+/* Active item */
+.App-nav .nav > li.active > a,
+.App-nav .nav > li > a.active {
   color: var(--accent) !important;
   background: var(--accent-dim) !important;
-  border-left: 2px solid var(--accent) !important;
+  font-weight: 600 !important;
+  border-left: 3px solid var(--accent) !important;
+  padding-left: 11px !important; /* 14px - 3px border compensation */
 }
 
 /* ===== SIDENAV DROPDOWN (for extension nav items) ===== */
@@ -271,15 +314,6 @@ html, body {
 .Button--primary:hover {
   background: var(--accent-hover) !important;
   box-shadow: 0 0 12px var(--accent-glow) !important;
-}
-
-/* Start a Discussion button */
-.Button--primary[aria-label="Start a Discussion"] {
-  background: var(--accent) !important;
-  color: #000 !important;
-  font-weight: 700 !important;
-  padding: 10px 20px !important;
-  border-radius: 100px !important;
 }
 
 /* ===== DISCUSSION LIST ===== */
