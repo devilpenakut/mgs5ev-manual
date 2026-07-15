@@ -19,7 +19,7 @@
         <path d="M9 16V10h3.5a2.5 2.5 0 0 1 0 5H9m10-5v6" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M20 12a2 2 0 0 0-2-2h-2v6h2a2 2 0 0 0 2-2v-2Z" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round"/>
       </svg>
-      <span>MG S5 <span style="color:var(--accent)">EV</span></span>
+      <span>MG S5 <span class="brand-accent">EV</span></span>
       <span class="nav-badge">Indonesia</span>
     </div>
     <div class="nav-links">
@@ -29,7 +29,7 @@
       <a href="tips.html">Tips</a>
       <a href="darurat.html">Darurat</a>
       <a href="perawatan.html">Perawatan</a>
-      <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" style="color:var(--accent);border:1px solid rgba(34,197,94,.2)">💬 Forum</a>
+      <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
     </div>
   </div>
 </nav>
@@ -38,7 +38,7 @@
   <div class="container">
     <div class="hero-tag">⚡ Resmi untuk Pasar Indonesia</div>
     <h1>MG S5 EV<br>Buku Panduan Komunitas</h1>
-    <p class="hero-sub">Panduan lengkap MG S5 EV untuk pemilik di Indonesia — dirangkum dari Buku Pemilik resmi, website MG Motor Indonesia, dan pengalaman komunitas.</p>
+    <p class="hero-sub">Panduan lengkap MG S5 EV untuk pemilik di Indonesia — dirangkum dari Buku Pemilik resmi, situs MG Motor Indonesia, dan pengalaman komunitas.</p>
     <div class="hero-stats">
       <div class="hero-stat"><div class="hero-stat-val">4.476 mm</div><div class="hero-stat-lbl">Panjang</div></div>
       <div class="hero-stat"><div class="hero-stat-val">2.730 mm</div><div class="hero-stat-lbl">Jarak Sumbu</div></div>
@@ -49,112 +49,109 @@
 </header>
 
 <div class="container">
-  <div class="disclaimer-card" role="note" aria-label="Peringatan">
-    <p><strong>⚠️ Disclaimer:</strong> Buku panduan ini <strong>bukan</strong> dokumen resmi MG. Disusun oleh komunitas berdasarkan Buku Pemilik resmi, website <a href="https://www.mgmotor.id/mgmodels/mgs5ev" target="_blank">mgmotor.id</a>, dan sumber komunitas. Harga OTR Jakarta dapat berubah.</p>
+  <div class="disclaimer-card" role="note" aria-label="Disclaimer sumber">
+    <p><strong>⚠️ Disclaimer:</strong> Buku panduan ini <strong>bukan</strong> dokumen resmi MG. Disusun oleh komunitas berdasarkan Buku Pemilik resmi, situs <a href="https://www.mgmotor.id/mgmodels/mgs5ev" target="_blank" rel="noopener">mgmotor.id</a>, dan sumber komunitas. Harga OTR Jakarta dapat berubah.</p>
   </div>
 
-  <!-- Quick Nav -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:48px">
-    <a href="panduan.html" class="card" style="text-align:center;padding:24px 16px;display:block">
-      <div style="font-size:1.8rem;margin-bottom:8px">📖</div>
-      <div style="font-weight:600;color:var(--text);font-size:.9rem">Panduan 10 Bab</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">Lengkap dari A sampai Z</div>
+  <div class="quick-nav">
+    <a href="panduan.html" class="card quick-nav-card">
+      <div class="quick-nav-icon">📖</div>
+      <div class="quick-nav-title">Panduan 10 Bab</div>
+      <div class="quick-nav-meta">Lengkap dari A sampai Z</div>
     </a>
-    <a href="peringatan.html" class="card" style="text-align:center;padding:24px 16px;display:block">
-      <div style="font-size:1.8rem;margin-bottom:8px">⚠️</div>
-      <div style="font-weight:600;color:var(--text);font-size:.9rem">Lampu Peringatan</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">12 indikator dashboard</div>
+    <a href="peringatan.html" class="card quick-nav-card">
+      <div class="quick-nav-icon">⚠️</div>
+      <div class="quick-nav-title">Lampu Peringatan</div>
+      <div class="quick-nav-meta">12 indikator dashboard</div>
     </a>
-    <a href="darurat.html" class="card" style="text-align:center;padding:24px 16px;display:block">
-      <div style="font-size:1.8rem;margin-bottom:8px">🆘</div>
-      <div style="font-weight:600;color:var(--text);font-size:.9rem">Prosedur Darurat</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">Kecelakaan, HV, ban bocor</div>
+    <a href="darurat.html" class="card quick-nav-card">
+      <div class="quick-nav-icon">🆘</div>
+      <div class="quick-nav-title">Prosedur Darurat</div>
+      <div class="quick-nav-meta">Kecelakaan, HV, ban bocor</div>
     </a>
-    <a href="tips.html" class="card" style="text-align:center;padding:24px 16px;display:block">
-      <div style="font-size:1.8rem;margin-bottom:8px">💡</div>
-      <div style="font-weight:600;color:var(--text);font-size:.9rem">Tips & Trik</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">Fitur tersembunyi & rahasia</div>
+    <a href="tips.html" class="card quick-nav-card">
+      <div class="quick-nav-icon">💡</div>
+      <div class="quick-nav-title">Tips &amp; Trik</div>
+      <div class="quick-nav-meta">Fitur tersembunyi &amp; kebiasaan penting</div>
     </a>
-    <a href="perawatan.html" class="card" style="text-align:center;padding:24px 16px;display:block">
-      <div style="font-size:1.8rem;margin-bottom:8px">🔧</div>
-      <div style="font-weight:600;color:var(--text);font-size:.9rem">Perawatan & Data</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">Fluida, ban, spesifikasi</div>
+    <a href="perawatan.html" class="card quick-nav-card">
+      <div class="quick-nav-icon">🔧</div>
+      <div class="quick-nav-title">Perawatan &amp; Data</div>
+      <div class="quick-nav-meta">Fluida, ban, spesifikasi</div>
     </a>
-    <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="card" style="text-align:center;padding:24px 16px;display:block;border-color:rgba(34,197,94,.2)">
-      <div style="font-size:1.8rem;margin-bottom:8px">💬</div>
-      <div style="font-weight:600;color:var(--accent);font-size:.9rem">Forum Komunitas</div>
-      <div style="font-size:.75rem;color:var(--muted);margin-top:4px">Diskusi sesama pemilik MG S5 EV</div>
+    <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="card quick-nav-card is-forum">
+      <div class="quick-nav-icon">💬</div>
+      <div class="quick-nav-title accent-text">Forum Komunitas</div>
+      <div class="quick-nav-meta">Diskusi sesama pemilik MG S5 EV</div>
     </a>
   </div>
 </div>
 
-<!-- ===== VARIAN & HARGA ===== -->
-<section class="section" id="varian" style="padding-top:0">
+<section class="section section-tight" id="varian">
   <div class="container">
     <div class="section-header">
-      <div class="hero-tag" style="margin-bottom:10px">🏷️ Harga &amp; Varian</div>
+      <div class="hero-tag">🏷️ Harga &amp; Varian</div>
       <h2>Varian MG S5 EV Indonesia</h2>
-      <p>MG S5 EV tersedia dalam 3 varian — data dari mgmotor.id</p>
+      <p>MG S5 EV tersedia dalam 3 varian berdasarkan data dari mgmotor.id.</p>
     </div>
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
             <th>Spesifikasi</th>
-            <th style="text-align:center">Ignite</th>
-            <th style="text-align:center">Magnify</th>
-            <th style="text-align:center">Magnify Max*</th>
+            <th class="center">Ignite</th>
+            <th class="center">Magnify</th>
+            <th class="center">Magnify Max*</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Harga OTR Jakarta</td><td style="text-align:center;font-weight:700;color:var(--accent)">Rp333,9 Juta**</td><td style="text-align:center;font-weight:700;color:var(--accent)">Rp355,9 Juta**</td><td style="text-align:center;font-weight:700;color:var(--accent)">Rp455,9 Juta</td></tr>
-          <tr><td>Baterai</td><td style="text-align:center">LFP 49 kWh</td><td style="text-align:center">LFP 49 kWh</td><td style="text-align:center">LFP 62 kWh</td></tr>
-          <tr><td>Tenaga Maks</td><td style="text-align:center">170 PS</td><td style="text-align:center">170 PS</td><td style="text-align:center">204 PS</td></tr>
-          <tr><td>Torsi Maks</td><td style="text-align:center">250 Nm</td><td style="text-align:center">250 Nm</td><td style="text-align:center">350 Nm</td></tr>
-          <tr><td>Jarak Tempuh</td><td style="text-align:center">415 km</td><td style="text-align:center">410 km</td><td style="text-align:center">515 km</td></tr>
-          <tr><td>DC Fast (20→80%)</td><td style="text-align:center">~24 menit</td><td style="text-align:center">~24 menit</td><td style="text-align:center">~26 menit</td></tr>
-          <tr><td>Daya DC Maks</td><td style="text-align:center">120 kW</td><td style="text-align:center">120 kW</td><td style="text-align:center">150 kW</td></tr>
-          <tr><td>Pelek</td><td style="text-align:center">17" Alloy</td><td style="text-align:center">18" Alloy</td><td style="text-align:center">18" Alloy</td></tr>
-          <tr><td>Ban</td><td style="text-align:center">215/60 R17</td><td style="text-align:center">225/55 R18</td><td style="text-align:center">225/55 R18</td></tr>
-          <tr><td>Jok</td><td style="text-align:center">Fabric</td><td style="text-align:center">Synthetic Leather</td><td style="text-align:center">Synthetic Leather</td></tr>
-          <tr><td>Jok Ventilated</td><td style="text-align:center"><span class="dash">—</span></td><td style="text-align:center"><span class="check">✓</span>**</td><td style="text-align:center"><span class="check">✓</span></td></tr>
-          <tr><td>Sunroof Panoramic</td><td style="text-align:center"><span class="dash">—</span></td><td style="text-align:center"><span class="check">✓</span>**</td><td style="text-align:center"><span class="check">✓</span></td></tr>
-          <tr><td>Power Tailgate</td><td style="text-align:center"><span class="dash">—</span></td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td></tr>
-          <tr><td>Wireless Charger</td><td style="text-align:center"><span class="dash">—</span></td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td></tr>
-          <tr><td>i-SMART</td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td></tr>
-          <tr><td>ADAS Lengkap</td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td><td style="text-align:center"><span class="check">✓</span></td></tr>
+          <tr><td>Harga OTR Jakarta</td><td class="center accent-value">Rp333,9 Juta**</td><td class="center accent-value">Rp355,9 Juta**</td><td class="center accent-value">Rp455,9 Juta</td></tr>
+          <tr><td>Baterai</td><td class="center">LFP 49 kWh</td><td class="center">LFP 49 kWh</td><td class="center">LFP 62 kWh</td></tr>
+          <tr><td>Tenaga Maks</td><td class="center">170 PS</td><td class="center">170 PS</td><td class="center">204 PS</td></tr>
+          <tr><td>Torsi Maks</td><td class="center">250 Nm</td><td class="center">250 Nm</td><td class="center">350 Nm</td></tr>
+          <tr><td>Jarak Tempuh</td><td class="center">415 km</td><td class="center">410 km</td><td class="center">515 km</td></tr>
+          <tr><td>DC Fast (20→80%)</td><td class="center">~24 menit</td><td class="center">~24 menit</td><td class="center">~26 menit</td></tr>
+          <tr><td>Daya DC Maks</td><td class="center">120 kW</td><td class="center">120 kW</td><td class="center">150 kW</td></tr>
+          <tr><td>Pelek</td><td class="center">17&quot; Alloy</td><td class="center">18&quot; Alloy</td><td class="center">18&quot; Alloy</td></tr>
+          <tr><td>Ban</td><td class="center">215/60 R17</td><td class="center">225/55 R18</td><td class="center">225/55 R18</td></tr>
+          <tr><td>Jok</td><td class="center">Fabric</td><td class="center">Synthetic Leather</td><td class="center">Synthetic Leather</td></tr>
+          <tr><td>Jok Ventilated</td><td class="center"><span class="dash">—</span></td><td class="center"><span class="check">✓</span>**</td><td class="center"><span class="check">✓</span></td></tr>
+          <tr><td>Sunroof Panoramic</td><td class="center"><span class="dash">—</span></td><td class="center"><span class="check">✓</span>**</td><td class="center"><span class="check">✓</span></td></tr>
+          <tr><td>Power Tailgate</td><td class="center"><span class="dash">—</span></td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td></tr>
+          <tr><td>Wireless Charger</td><td class="center"><span class="dash">—</span></td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td></tr>
+          <tr><td>i-SMART</td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td></tr>
+          <tr><td>ADAS Lengkap</td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td><td class="center"><span class="check">✓</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:.75rem;color:#5c5c64;text-align:center">*Magnify Max estimasi Q3 2026 · **Eksklusif 1.500 konsumen pertama · Harga dapat berubah</p>
+    <p class="muted-note">*Magnify Max estimasi Q3 2026 · **Eksklusif 1.500 konsumen pertama · Harga dapat berubah</p>
 
-    <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+    <div class="info-grid-3 mt-24">
       <div class="card">
         <div class="label">🎨 Pilihan Warna</div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
-          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:20px;height:20px;border-radius:50%;background:#f5f5f0;border:1px solid #444;display:inline-block"></span>York White</span>
-          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:20px;height:20px;border-radius:50%;background:#111;border:1px solid #555;display:inline-block"></span>Pearl Black</span>
-          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:20px;height:20px;border-radius:50%;background:#5a5a5e;border:1px solid #666;display:inline-block"></span>Andes Grey</span>
-          <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:20px;height:20px;border-radius:50%;background:#dc2626;border:1px solid #666;display:inline-block"></span>Flare Red</span>
+        <div class="swatch-list">
+          <span class="swatch-item"><span class="swatch-dot white"></span>York White</span>
+          <span class="swatch-item"><span class="swatch-dot black"></span>Pearl Black</span>
+          <span class="swatch-item"><span class="swatch-dot gray"></span>Andes Grey</span>
+          <span class="swatch-item"><span class="swatch-dot red"></span>Flare Red</span>
         </div>
       </div>
       <div class="card">
         <div class="label">🔋 Baterai LFP</div>
-        <p style="margin-top:8px"><strong>Zero thermal runaway</strong> — teknologi Lithium Iron Phosphate yang lebih aman, lebih tahan lama, dan ramah lingkungan. Performa stabil di kondisi ekstrem sekalipun.</p>
+        <p class="mt-8"><strong>Zero thermal runaway</strong> — teknologi Lithium Iron Phosphate yang lebih aman, tahan lama, dan stabil untuk pemakaian harian.</p>
       </div>
       <div class="card">
         <div class="label">⚖️ Distribusi Berat 47:53</div>
-        <p style="margin-top:8px">Konfigurasi <strong>Rear-Wheel Drive (RWD)</strong> dengan distribusi berat hampir seimbang untuk handling dan stabilitas optimal saat bermanuver maupun di kecepatan tinggi.</p>
+        <p class="mt-8">Konfigurasi <strong>Rear-Wheel Drive (RWD)</strong> memberi distribusi berat hampir seimbang untuk handling dan stabilitas yang lebih rapi.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SPESIFIKASI ===== -->
-<section class="section" style="padding-top:0">
+<section class="section section-tight">
   <div class="container">
     <div class="section-header">
-      <div class="hero-tag" style="margin-bottom:10px">📐 Spesifikasi</div>
+      <div class="hero-tag">📐 Spesifikasi</div>
       <h2>Spesifikasi Teknis</h2>
     </div>
     <div class="spec-grid">
@@ -181,23 +178,22 @@
         <div class="spec-row"><span class="key">Kapasitas</span><span class="val">49 kWh / 62 kWh</span></div>
         <div class="spec-row"><span class="key">Jarak Tempuh</span><span class="val">410–515 km</span></div>
         <div class="spec-row"><span class="key">DC Fast 20→80%</span><span class="val">24–26 menit</span></div>
-        <div class="spec-row"><span class="key">Thermal Runaway</span><span class="val" style="color:var(--accent)">0 kasus</span></div>
+        <div class="spec-row"><span class="key">Thermal Runaway</span><span class="val accent-text">0 kasus</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== KONTAK ===== -->
-<section class="section" id="kontak" style="padding-top:0">
+<section class="section section-tight" id="kontak">
   <div class="container">
     <div class="section-header">
-      <div class="hero-tag" style="margin-bottom:10px">📞 Kontak</div>
+      <div class="hero-tag">📞 Kontak</div>
       <h2>Kontak &amp; Sumber Daya</h2>
     </div>
-    <div class="app-grid" style="max-width:600px">
-      <div class="app-item"><h3>🌐 mgmotor.id</h3><p><a href="https://www.mgmotor.id" target="_blank">mgmotor.id</a><br>Model, promo, dealer</p></div>
+    <div class="app-grid compact">
+      <div class="app-item"><h3>🌐 mgmotor.id</h3><p><a href="https://www.mgmotor.id" target="_blank" rel="noopener">mgmotor.id</a><br>Model, promo, dealer</p></div>
       <div class="app-item"><h3>📱 i-SMART App</h3><p>Play Store / App Store<br>Kontrol &amp; manual digital</p></div>
-      <div class="app-item"><h3>📍 Cari Dealer</h3><p><a href="https://www.mgmotor.id/mgdealer" target="_blank">mgmotor.id/mgdealer</a><br>Test drive &amp; konsultasi</p></div>
+      <div class="app-item"><h3>📍 Cari Dealer</h3><p><a href="https://www.mgmotor.id/mgdealer" target="_blank" rel="noopener">mgmotor.id/mgdealer</a><br>Test drive &amp; konsultasi</p></div>
       <div class="app-item"><h3>📄 Brosur</h3><p>Download dari website<br>Semua varian MG S5 EV</p></div>
     </div>
   </div>
@@ -205,8 +201,8 @@
 
 <footer role="contentinfo">
   <div class="container">
-    <p style="margin-bottom:6px">MG S5 EV — Buku Panduan Komunitas Indonesia</p>
-    <p>Berdasarkan Buku Pemilik resmi &amp; <a href="https://www.mgmotor.id/mgmodels/mgs5ev" target="_blank">mgmotor.id</a>. Tidak terafiliasi dengan PT SAIC Motor Indonesia.</p>
+    <p class="mb-0">MG S5 EV — Buku Panduan Komunitas Indonesia</p>
+    <p>Berdasarkan Buku Pemilik resmi &amp; <a href="https://www.mgmotor.id/mgmodels/mgs5ev" target="_blank" rel="noopener">mgmotor.id</a>. Tidak terafiliasi dengan PT SAIC Motor Indonesia.</p>
   </div>
 </footer>
 
