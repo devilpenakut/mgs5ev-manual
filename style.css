@@ -62,10 +62,14 @@ nav {
 }
 nav .container { display: flex; align-items: center; justify-content: space-between; min-height: 64px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; color: var(--text); }
-.nav-menu { display: contents; }
+.nav-menu { display: flex; align-items: center; }
+.nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 .nav-toggle {
   display: none;
-  list-style: none;
   align-items: center;
   justify-content: center;
   width: 42px;
@@ -76,7 +80,6 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
   color: var(--text);
   cursor: pointer;
 }
-.nav-toggle::-webkit-details-marker { display: none; }
 .nav-toggle-bars {
   display: inline-flex;
   flex-direction: column;
@@ -393,7 +396,7 @@ footer p { font-size: 0.8rem; color: #5c5c64; }
     align-items: stretch;
     gap: 6px;
   }
-  .nav-menu[open] .nav-links { display: flex; }
+  .nav-toggle-input:checked + .nav-toggle + .nav-links { display: flex; }
   .nav-links a {
     font-size: 0.88rem;
     padding: 10px 12px;
