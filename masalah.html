@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masalah &amp; Isu Komunitas — MG S5 EV Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="masalah.css">
+</head>
+<body>
+
+<nav role="navigation" aria-label="Navigasi utama">
+  <div class="container">
+    <div class="nav-brand">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="24" height="24" rx="8" stroke="#22c55e" stroke-width="2" fill="none"/>
+        <path d="M9 16V10h3.5a2.5 2.5 0 0 1 0 5H9m10-5v6" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 12a2 2 0 0 0-2-2h-2v6h2a2 2 0 0 0 2-2v-2Z" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span>MG S5 <span class="brand-accent">EV</span></span>
+      <span class="nav-badge">Indonesia</span>
+    </div>
+    <div class="nav-menu">
+      <input type="checkbox" id="nav-toggle-masalah" class="nav-toggle-input" aria-hidden="true">
+      <label for="nav-toggle-masalah" class="nav-toggle" aria-label="Buka navigasi">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </label>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="panduan.html">Panduan</a>
+        <a href="peringatan.html">Peringatan</a>
+        <a href="tips.html">Tips</a>
+        <a href="darurat.html">Darurat</a>
+        <a href="perawatan.html">Perawatan</a>
+        <a href="masalah.html" class="active">Masalah</a>
+        <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero hero-sm">
+  <div class="container">
+    <div class="hero-tag">⚠️ Masalah Teridentifikasi</div>
+    <h1>Masalah &amp; Isu Komunitas</h1>
+    <p class="hero-sub">Kumpulan masalah yang dilaporkan pemilik MG S5 EV di berbagai forum dan grup komunitas. Termasuk isu umum, solusi sementara, dan informasi recall resmi.</p>
+  </div>
+</header>
+
+<div class="container">
+  <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+
+  <div class="disclaimer-card" role="note" aria-label="Peringatan">
+    <p><strong>⚠️ Penting:</strong> Daftar ini dikumpulkan dari pengalaman komunitas dan bukan daftar resmi MG. Beberapa masalah mungkin sudah diperbaiki di versi software atau produksi terbaru. Jika mengalami masalah, hubungi MG Authorised Repairer terdekat.</p>
+  </div>
+
+  <!-- ===== Troubleshooting Cepat ===== -->
+  <section class="section section-top-sm" id="troubleshooting">
+    <div class="issue-header">
+      <span class="issue-cat">Panduan Solusi</span>
+      <h2>🔧 Panduan Troubleshooting Cepat</h2>
+    </div>
+    <p class="section-intro">Masalah umum sehari-hari dan langkah cepat yang bisa dicoba sebelum menghubungi dealer.</p>
+
+    <div class="trouble-grid">
+      <div class="issue-card trouble-item">
+        <h3>🔑 Mobil Tidak Bisa Masuk READY</h3>
+        <ul>
+          <li>Pastikan smart key berada di dalam kabin</li>
+          <li>Injak rem dengan kuat — sensor pedal rem kadang butuh tekanan penuh</li>
+          <li>Coba posisi start cadangan (tempelkan kunci ke konsol tengah yang ditandai)</li>
+          <li>Cek kondisi aki 12V — kutub kendor adalah penyebab umum (lihat <a href="#aki-12v">isu Aki 12V</a>)</li>
+        </ul>
+      </div>
+
+      <div class="issue-card trouble-item">
+        <h3>🔌 Charging Tidak Berjalan</h3>
+        <ul>
+          <li>Pastikan kabel charging terpasang penuh (terkunci)</li>
+          <li>Periksa jadwal charging di i-SMART — mungkin sedang dalam mode jadwal tunda</li>
+          <li>Pastikan port charging bebas debu dan kotoran</li>
+          <li>Coba charger AC lain atau DC fast charger untuk memastikan bukan masalah kabel</li>
+          <li>Cek indikator LED pada port charging — merah menandakan error pada sistem</li>
+          <li>Pastikan kunci mekanis port charging tidak macet</li>
+        </ul>
+      </div>
+
+      <div class="issue-card trouble-item">
+        <h3>📱 i-SMART Tidak Terhubung</h3>
+        <ul>
+          <li>Pastikan kendaraan memiliki koneksi data (4G) — cek ikon sinyal di infotainment</li>
+          <li>Restart aplikasi i-SMART di HP</li>
+          <li>Logout lalu login ulang di aplikasi</li>
+          <li>Jika di area parkir basement, sinyal mungkin tidak memadai</li>
+        </ul>
+      </div>
+
+      <div class="issue-card trouble-item">
+        <h3>🔄 Reset Infotainment</h3>
+        <p>Cara reset cepat sistem infotainment tanpa kehilangan data:</p>
+        <ol>
+          <li>Tekan dan tahan tombol <strong>Home</strong> (atau tombol power) selama 10-15 detik</li>
+          <li>Layar akan mati dan restart — jangan lepas tombol</li>
+          <li>Tunggu hingga logo MG muncul kembali</li>
+        </ol>
+        <p class="mt-8">Untuk reset pabrik (hapus semua data): Settings → System → Factory Reset (hanya jika perlu).</p>
+      </div>
+
+      <div class="issue-card trouble-item">
+        <h3>🔋 Aki 12V Habis Setelah Parkir Lama</h3>
+        <ul>
+          <li>Mobil yang parkir lama (&gt;14 hari) akan menguras aki 12V meski tidak digunakan</li>
+          <li>Jika memungkinkan, lepas kabel negatif aki 12V saat parkir panjang</li>
+          <li>Jika tidak bisa lepas kabel, hidupkan READY mode minimal 30 menit per minggu</li>
+          <li>Gunakan jump start prosedur (lihat <a href="darurat.html">Prosedur Darurat</a>)</li>
+        </ul>
+      </div>
+
+      <div class="issue-card trouble-item">
+        <h3>🔧 Ganti Baterai Kunci (CR2032)</h3>
+        <p>Smart key menggunakan baterai CR2032. Tanda baterai lemah:</p>
+        <ul>
+          <li>Jarak passive entry menurun drastis</li>
+          <li>Peringatan "Kunci Tidak Terdeteksi" di dashboard</li>
+          <li>Ganti sendiri dengan membuka casing kunci — tekan tombol samping, tarik kunci darurat, buka casing</li>
+        </ul>
+        <p class="mt-8">Baterai TPMS sensor juga CR2032 — penggantian hanya oleh Authorised Repairer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Aki 12V ===== -->
+  <section class="section" id="aki-12v">
+    <div class="issue-header">
+      <span class="issue-cat">Aki 12V</span>
+      <h2>🔋 Kutub Aki Tidak Terkencang Pabrik</h2>
+    </div>
+    <div class="issue-card">
+      <div class="issue-meta">
+        <span class="issue-tag severity-high">Umum</span>
+        <span class="issue-tag">Sejak produksi awal</span>
+      </div>
+      <p><strong>Masalah:</strong> Beberapa pemilik menemukan kutub positif (+) aki 12V kendur atau tidak dikencangkan dengan benar dari pabrik. Ini dapat menyebabkan:</p>
+      <ul>
+        <li>Mobil tiba-tiba mati total — tidak bisa masuk READY mode</li>
+        <li>Sistem infotainment restart acak</li>
+        <li>Peringatan sistem kelistrikan di dashboard</li>
+        <li>Aki 12V cepat habis karena kontak tidak sempurna</li>
+      </ul>
+      <p><strong>Solusi:</strong> Periksa dan kencangkan kutub aki 12V di kompartemen depan. Cukup kencangkan dengan kunci pas 10 mm. Pastikan koneksi kencang tapi tidak terlalu kencang hingga merusak ulir.</p>
+      <p class="issue-note">💡 <strong>Tips:</strong> Sebaiknya periksa ini segera setelah mengambil mobil baru dari dealer — butuh waktu 2 menit dan mencegah masalah besar di kemudian hari.</p>
+    </div>
+  </section>
+
+  <!-- ===== Infotainment ===== -->
+  <section class="section" id="infotainment">
+    <div class="issue-header">
+      <span class="issue-cat">Infotainment</span>
+      <h2>📱 Masalah Sistem Infotainment</h2>
+    </div>
+
+    <div class="issue-card">
+      <h3>📞 HP Tiba-tiba Terputus &amp; Suara Pengemudi Hilang</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Saat panggilan telepon melalui Bluetooth, suara pengemudi tiba-tiba tidak terdengar oleh lawan bicara meskipun panggilan masih tersambung. Infotainment juga kadang memutus koneksi HP tanpa sebab.</p>
+      <p><strong>Solusi sementara:</strong></p>
+      <ul>
+        <li>Hapus perangkat dari daftar Bluetooth di HP dan mobil, lalu pasangkan ulang</li>
+        <li>Restart infotainment (tekan dan tahan tombol Home / power selama 10 detik)</li>
+        <li>Pastikan software infotainment pada versi terbaru (lihat <a href="panduan.html#bab11">Bab 11: Software &amp; Update</a>)</li>
+      </ul>
+    </div>
+
+    <div class="issue-card">
+      <h3>🌗 Lampu Dashboard Tidak Menyesuaikan Siang/Malam</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Kecerahan layar infotainment dan panel instrumen tidak otomatis beralih antara mode siang dan malam. Layar tetap terang saat malam hari, atau gelap saat siang.</p>
+      <p><strong>Penyebab:</strong> Biasanya terkait sensor cahaya terhadap atau pembacaan posisi lampu senja. Beberapa pemilik melaporkan bahwa masalah ini muncul setelah update software tertentu.</p>
+      <p><strong>Solusi sementara:</strong> Atur keceraran manual di Settings → Display. Jika masalah berlanjut, hubungi Authorised Repairer — mungkin perlu kalibrasi sensor.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>🌐 Terjemahan Bahasa Tidak Akurat</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-low">Ringan</span>
+      </div>
+      <p><strong>Masalah:</strong> Beberapa menu dan notifikasi di infotainment menggunakan terjemahan yang membingungkan atau tidak tepat secara grammar. Ini termasuk istilah teknis yang diterjemahkan secara harfiah.</p>
+      <p><strong>Solusi:</strong> Tidak ada solusi langsung selain menunggu update software dari MG. Beberapa pemilik mengakali dengan mengganti bahasa sistem ke Inggris agar istilah lebih jelas.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>🗺️ Navigasi &amp; Perencanaan Charging Bermasalah</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Navigasi bawaan kadang tidak akurat dalam merekomendasikan rute, terutama saat merencanakan perhentian charging untuk perjalanan jauh. Titik charging tidak selalu update.</p>
+      <p><strong>Solusi:</strong> Gunakan Google Maps atau Waze melalui Apple CarPlay / Android Auto untuk navigasi yang lebih andal. Fitur charge planning bawaan — verifikasi manual sebelum mengandalkannya sepenuhnya.</p>
+    </div>
+  </section>
+
+  <!-- ===== ADAS ===== -->
+  <section class="section" id="adas">
+    <div class="issue-header">
+      <span class="issue-cat">ADAS</span>
+      <h2>🚗 Masalah Sistem Bantuan Pengemudi</h2>
+    </div>
+
+    <div class="issue-card">
+      <h3>🚦 Adaptive Cruise Control (ACC)</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Beberapa pemilik melaporkan ACC kadang bereaksi lambat terhadap kendaraan yang menyelip di depan, atau sebaliknya terlalu agresif dalam pengereman. Akselerasi setelah mobil di depan pindah jalur juga terasa tiba-tiba.</p>
+      <p><strong>Solusi sementara:</strong> Atur jarak following distance ke level yang lebih dekat (level 2-3) untuk respons yang lebih natural. Hindari penggunaan ACC di jalan dengan banyak tikungan tajam.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>🛞 Lane Keep Assist (LKA)</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> LKA kadang terlalu sensitif atau terlalu longgar dalam menjaga posisi jalur, terutama di jalan yang tidak rata atau marka pudar. Beberapa pemilik merasakan koreksi setir yang tidak mulus.</p>
+      <p><strong>Solusi sementara:</strong> Kurangi sensitivitas LKA melalui menu MG Pilot. Jika masih mengganggu, nonaktifkan LKA dan gunakan Lane Departure Warning saja. Pastikan sensor kamera di kaca depan bersih.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>🪧 Road Sign Recognition</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-low">Ringan</span>
+      </div>
+      <p><strong>Masalah:</strong> Sistem kadang salah membaca batas kecepatan — menampilkan limit dari jalan samping, rambu lama yang tidak tertutup, atau rambu yang tertutup sebagian.</p>
+      <p><strong>Solusi:</strong> Verifikasi batas kecepatan secara manual. MG Pilot akan menyesuaikan kembali saat melewati rambu berikutnya yang terbaca dengan jelas.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>💥 Front Collision Warning (FCW)</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Peringatan tabrakan depan berbunyi tanpa alasan jelas (false alarm) — terutama saat mendekati kendaraan di tikungan, atau saat melewati kendaraan parkir di sisi jalan.</p>
+      <p><strong>Solusi sementara:</strong> Atur sensitivitas FCW di menu MG Pilot ke level lebih rendah. Jika terus terjadi pada situasi spesifik, catat kondisinya dan laporkan ke Authorised Repairer saat servis.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>👣 One Pedal Driving (OPD)</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-low">Ringan</span>
+      </div>
+      <p><strong>Masalah:</strong> Saat OPD aktif, beberapa pemilik merasa regenerasi tidak konsisten — kadang kuat, kadang lemah tergantung suhu baterai dan SOC. Pada baterai penuh (&gt;95%), OPD hampir tidak terasa.</p>
+      <p><strong>Penjelasan:</strong> Ini adalah perilaku normal. Regenerasi berkurang saat baterai penuh karena tidak ada tempat untuk menyimpan energi. Juga berkurang saat baterai dingin untuk melindungi sel.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>📷 360° Camera — Tampangan Malam</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-low">Ringan</span>
+      </div>
+      <p><strong>Masalah:</strong> Kualitas kamera 360° menurun drastis di kondisi minim cahaya. Tampilan menjadi gelap dan sulit melihat objek di sekitar mobil.</p>
+      <p><strong>Solusi:</strong> Gunakan lampu parkir atau pastikan area sekitar memiliki pencahayaan yang cukup. Ini adalah keterbatasan hardware kamera, bukan kerusakan.</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>🛞 TPMS — Peringatan Fluktuatif</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-low">Ringan</span>
+      </div>
+      <p><strong>Masalah:</strong> TPMS kadang memberikan peringatan tekanan ban rendah saat suhu turun drastis (pagi hari), lalu hilang sendiri setelah ban hangat. Ini normal — tekanan turun ~0,07 bar per 10°C penurunan suhu.</p>
+      <p><strong>Solusi:</strong> Cek tekanan manual saat semua ban dingin. Jika tekanan sesuai 2,5 bar (37 psi), tidak perlu khawatir. Hanya isi ulang jika tekanan benar-benar turun di bawah 2,0 bar.</p>
+    </div>
+  </section>
+
+  <!-- ===== AC & Climate ===== -->
+  <section class="section" id="climate">
+    <div class="issue-header">
+      <span class="issue-cat">AC &amp; Climate</span>
+      <h2>🌡️ Masalah Sistem AC &amp; Recall R005</h2>
+    </div>
+
+    <div class="issue-card is-recall">
+      <div class="recall-badge">🔴 RECALL R005</div>
+      <h3>Kipas Pemanas (Heating Fan) — Recall R005</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-critical">Recall Resmi</span>
+        <span class="issue-tag">2025</span>
+      </div>
+      <p><strong>Masalah:</strong> Sejumlah unit MG S5 EV terdampak <strong>Vehicle Recall R005</strong> terkait kipas pemanas (heating fan) pada sistem HVAC. Komponen ini berpotensi tidak berfungsi sebagaimana mestinya dalam kondisi tertentu.</p>
+      <p><strong>Dampak:</strong> Pemanas kabin (heater) tidak berfungsi optimal — terutama terasa di cuaca dingin. Mode defrost mungkin tidak bekerja maksimal karena kipas pemanas tidak menyala.</p>
+      <p><strong>Tindakan:</strong></p>
+      <ul>
+        <li>Recall ini bersifat gratis — semua biaya ditanggung MG</li>
+        <li>Hubungi MG Authorised Repairer terdekat untuk jadwal penggantian komponen</li>
+        <li>Perbaikan biasanya memakan waktu 1-2 jam</li>
+        <li>Jika Anda belum mendapat notifikasi, cek VIN kendaraan melalui situs resmi MG atau tanyakan langsung ke dealer</li>
+      </ul>
+      <p class="issue-note">📞 <strong>Belum dapat notifikasi?</strong> Hubungi MG Authorised Repairer dan sampaikan nomor VIN Anda. Mereka bisa mengecek apakah unit Anda termasuk dalam daftar Recall R005.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer role="contentinfo">
+  <div class="container">
+    <p>MG S5 EV — Buku Panduan Komunitas Indonesia · <a href="index.html">Beranda</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
