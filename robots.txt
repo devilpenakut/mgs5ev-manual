@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mgs5ev-manual-indo.pages.dev/sitemap.xml
