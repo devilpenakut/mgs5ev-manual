@@ -250,7 +250,20 @@
     </div>
 
     <div class="issue-card">
-      <h3>👣 One Pedal Driving (OPD)</h3>
+      <h3>👣 One Pedal Driving (OPD) — Safety Bug</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-critical">🔴 Serius</span>
+        <span class="issue-tag">2025</span>
+      </div>
+      <p><strong>Masalah:</strong> Saat melakukan pengereman darurat (hard/panic stop) di mode OPD, mobil mundur bertenaga setelah pedal rem dilepas — meski transmisi masih di posisi D. Kondisi ini berlangsung ~3 detik dan mobil bisa bergerak mundur 6-10 meter sebelum berhenti sendiri. Semakin keras pengereman, semakin kencang laju mundurnya.</p>
+      <p><strong>Penyebab:</strong> Diduga software bug — energi regenerasi dari pengereman darurat tidak terdisipasi dengan benar, dan motor listrik tetap memberikan daya ke arah mundur meski tuas transmisi di D. Auto-hold juga gagal aktif karena waktu jeda antara stop dan lepas pedal terlalu singkat.</p>
+      <p><strong>Cegah:</strong> Setelah hard stop, tahan pedal rem selama 2-3 detik hingga Auto-hold aktif (ikon (A) hijau di dashboard) sebelum melepas rem. Atau matikan OPD sementara dan gunakan mode berkendara normal.</p>
+      <p><strong>Status:</strong> Telusuri — sudah dilaporkan ke MG UK dan DVSA (pemerintah Inggris). Beberapa pemilik dari Singapura juga mengonfirmasi masalah yang sama. MG belum memberikan perbaikan resmi.</p>
+      <p class="issue-note">📌 <strong>Sumber:</strong> Forum MGEVs.com — thread 111 balasan. Video demonstrasi tersedia di Google Drive (tautan di forum).</p>
+    </div>
+
+    <div class="issue-card">
+      <h3>👣 One Pedal Driving (OPD) — Regenerasi Tidak Konsisten</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
