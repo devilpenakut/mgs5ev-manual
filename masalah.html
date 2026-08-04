@@ -215,6 +215,35 @@
       <p><strong>Penyebab sementara:</strong> Diduga software crash pada sistem infotainment. Beberapa pemilik melaporkan ini terjadi setelah perjalanan jauh atau parkir di suhu panas. Reset melalui CCS charging (mobil di-charge ~30-50 menit) mengembalikan layar normal.</p>
       <p><strong>Solusi:</strong> Coba soft reset infotainment (tekan & tahan tombol Home/power 10-15 detik). Jika tidak berhasil, lakukan full reset 12V — lepas kabel negatif aki 12V selama 5 menit, lalu sambungkan kembali. Jika sering terjadi, bawa ke Authorised Repairer untuk diagnostik.</p>
     </div>
+
+    <div class="issue-card">
+      <h3>📻 Radio Mentok di Satu Stasiun &amp; "USB Tidak Dikenali"</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Radio tidak bisa ganti stasiun — FM/AM/DAB semua mentok di stasiun yang sama meski sudah soft reset &amp; factory reset. Muncul pesan "USB device not recognised" padahal tidak ada kabel atau perangkat USB terpasang. Dilaporkan terjadi pada beberapa unit sekaligus, biasanya setelah update software.</p>
+      <p><strong>Solusi:</strong></p>
+      <ul>
+        <li><strong>Reset aki 12V:</strong> lepas kabel negatif aki 12V beberapa menit, sambungkan kembali, lalu kalibrasi setir (putar lock-to-lock 2×) dan berkendara beberapa km untuk menghilangkan warning — terbukti mengatasi</li>
+        <li>Jika muncul lagi, minta dealer update firmware ke <strong>R33</strong> — versi R33 juga memperbaiki radio &amp; HP putus-putus</li>
+        <li>Rekam video masalahnya sebelum ke dealer — kadang error hilang sendiri saat dicek</li>
+      </ul>
+    </div>
+
+    <div class="issue-card">
+      <h3>📱 CarPlay Wireless Gagal Auto-Connect (Setelah Update iOS)</h3>
+      <div class="issue-meta">
+        <span class="issue-tag severity-mid">Sedang</span>
+      </div>
+      <p><strong>Masalah:</strong> Setelah update iOS 26.4.x, CarPlay wireless tidak auto-connect saat masuk mobil — harus pasang ulang setiap kali (connect sekali setelah re-pair, gagal lagi setelah restart mobil). Bluetooth tetap tersambung. Isu serupa juga dilaporkan di MG4 (infotainment sama).</p>
+      <p><strong>Solusi sementara (urut dari paling cepat):</strong></p>
+      <ul>
+        <li>Di iPhone: Settings → General → CarPlay → pilih MG → matikan CarPlay 5 detik → nyalakan lagi → ketuk ikon CarPlay di layar mobil — paling cepat, tanpa hapus pairing</li>
+        <li>Hapus pairing HP di mobil &amp; mobil di HP (CarPlay + Bluetooth), reboot HP, lalu pasangkan ulang — coba <strong>ganti nama HP</strong> sebelum re-pair (nama baru terbukti mengatasi)</li>
+        <li>Paksa HP connect ke Wi-Fi SSID mobil, atau sekali pakai kabel — koneksi wireless biasanya normal lagi di perjalanan berikutnya</li>
+        <li>Solusi permanen: update firmware ke <strong>R33</strong> di dealer — masalah CarPlay hilang</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===== ADAS ===== -->
