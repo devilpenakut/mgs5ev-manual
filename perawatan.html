@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="search.css">>
 </head>
 <body>
 
@@ -38,6 +39,7 @@
         <a href="masalah.html">Masalah</a>
         <a href="kacafilm.html">Kaca Film</a>
         <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+<button type="button" class="search-toggle" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-label="Buka pencarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg> Cari</button>
       </div>
     </div>
   </div>
@@ -57,7 +59,7 @@
   <section class="section">
     <div class="section-header">
       <div class="hero-tag">🧪 Fluida</div>
-      <h2>Fluida &amp; Kapasitas</h2>
+      <h2 id="fluida-amp-kapasitas">Fluida &amp; Kapasitas</h2>
       <p>Diringkas dari Buku Pemilik resmi MG S5 EV.</p>
     </div>
     <div class="fluids">
@@ -108,7 +110,7 @@
   <section class="section">
     <div class="section-header">
       <div class="hero-tag">🔋 Baterai yang Dapat Diganti</div>
-      <h2>Baterai yang Dapat Diganti Sendiri</h2>
+      <h2 id="baterai-yang-dapat-diganti-sendiri">Baterai yang Dapat Diganti Sendiri</h2>
       <p>Beberapa komponen MG S5 EV menggunakan baterai yang bisa diganti sendiri tanpa alat khusus. Ganti dengan tipe yang sama persis.</p>
     </div>
     <div class="table-wrap">
@@ -144,7 +146,7 @@
   <section class="section">
     <div class="section-header">
       <div class="hero-tag">📐 Data Teknis</div>
-      <h2>Spesifikasi Teknis Lengkap</h2>
+      <h2 id="spesifikasi-teknis-lengkap">Spesifikasi Teknis Lengkap</h2>
     </div>
     <div class="spec-grid">
       <div class="card">
@@ -209,7 +211,7 @@
   <section class="section">
     <div class="section-header">
       <div class="hero-tag">🔋 Pengisian Daya</div>
-      <h2>Waktu Pengisian</h2>
+      <h2 id="waktu-pengisian">Waktu Pengisian</h2>
     </div>
     <div class="spec-grid">
       <div class="card">
@@ -264,7 +266,7 @@
   <section class="section">
     <div class="section-header">
       <div class="hero-tag">🛞 Rem &amp; Cakram</div>
-      <h2>Perawatan Rem &amp; Korosi Cakram</h2>
+      <h2 id="perawatan-rem-amp-korosi-cakram">Perawatan Rem &amp; Korosi Cakram</h2>
     </div>
     <div class="spec-grid">
       <div class="card">
@@ -292,5 +294,15 @@
   </div>
 </footer>
 
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pencarian situs">
+  <div class="search-modal-panel">
+    <div class="search-modal-head">
+      <span class="sm-title">🔍 Cari di panduan MG S5 EV</span>
+      <button type="button" class="search-modal-close" id="search-modal-close" aria-label="Tutup pencarian">&times;</button>
+    </div>
+    <div id="search-modal-panel"></div>
+  </div>
+</div>
+<script src="search.js"></script>
 </body>
 </html>

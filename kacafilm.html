@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="search.css">>
 </head>
 <body>
 
@@ -39,6 +40,7 @@
         <a href="masalah.html">Masalah</a>
         <a href="kacafilm.html" class="active">Kaca Film</a>
         <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+<button type="button" class="search-toggle" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-label="Buka pencarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg> Cari</button>
       </div>
     </div>
   </div>
@@ -99,14 +101,14 @@
   <section class="section section-tight" id="istilah" aria-label="Memahami spesifikasi kaca film">
     <div class="container">
       <div class="section-header">
-        <h2>📖 Memahami Spesifikasi Kaca Film</h2>
+        <h2 id="memahami-spesifikasi-kaca-film">📖 Memahami Spesifikasi Kaca Film</h2>
         <p>Empat angka penting yang harus kamu pahami sebelum memilih kaca film.</p>
       </div>
 
       <div class="spec-grid">
         <article class="card">
           <div class="label">🔆 VLT</div>
-          <h3>Visible Light Transmittance</h3>
+          <h3 id="visible-light-transmittance">Visible Light Transmittance</h3>
           <p>Seberapa banyak <strong>cahaya tampak</strong> yang tembus kaca.</p>
           <div class="stack-gap-sm">
             <div class="spec-row"><span class="key"><strong>70%</strong></span><span class="val">Hampir bening, seperti kaca biasa</span></div>
@@ -119,7 +121,7 @@
 
         <article class="card">
           <div class="label">🌡️ IR</div>
-          <h3>Infra Red Rejection</h3>
+          <h3 id="infra-red-rejection">Infra Red Rejection</h3>
           <p>Kemampuan menolak <strong>radiasi infra merah</strong> — penghasil panas utama dari matahari.</p>
           <div class="stack-gap-sm">
             <div class="spec-row"><span class="key"><strong>99%</strong></span><span class="val">🔥 Hampir semua panas ditolak — sangat sejuk</span></div>
@@ -131,7 +133,7 @@
 
         <article class="card">
           <div class="label">☀️ TSER</div>
-          <h3>Total Solar Energy Rejected</h3>
+          <h3 id="total-solar-energy-rejected">Total Solar Energy Rejected</h3>
           <p>Total <strong>keseluruhan energi matahari</strong> yang ditolak (gabungan IR + UV + cahaya tampak).</p>
           <div class="stack-gap-sm">
             <div class="spec-row"><span class="key"><strong>74%</strong></span><span class="val">❄️ Paling sejuk — AC kerja ringan</span></div>
@@ -143,7 +145,7 @@
 
         <article class="card">
           <div class="label">🛡️ UVR</div>
-          <h3>Ultra Violet Rejection</h3>
+          <h3 id="ultra-violet-rejection">Ultra Violet Rejection</h3>
           <p>Kemampuan menolak <strong>sinar ultraviolet</strong> — penyebab kulit terbakar &amp; interior pudar.</p>
           <div class="stack-gap-sm">
             <div class="spec-row"><span class="key"><strong>&gt;99%</strong></span><span class="val">Hampir semua UV diblokir</span></div>
@@ -160,11 +162,11 @@
     <div class="container">
       <div class="section-header">
         <div class="hero-tag">Merek #1</div>
-        <h2>🔵 V-KOOL</h2>
+        <h2 id="v-kool">🔵 V-KOOL</h2>
         <p>Teknologi <strong>XIR® Sputtering</strong> (dilapisi emas &amp; perak) dari Silicon Valley, AS. Memantulkan panas bukan menyerap. Certified Skin Cancer Foundation. Tersedia seri non-metal (VRX) untuk pengguna yang peduli sinyal.</p>
       </div>
 
-      <h3>VK Series — XIR® Sputtering (Metal, IR Tertinggi)</h3>
+      <h3 id="vk-series-xir-sputtering-metal-ir-tertinggi">VK Series — XIR® Sputtering (Metal, IR Tertinggi)</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VK Series" tabindex="0">
         <table>
           <thead>
@@ -179,7 +181,7 @@
         </table>
       </div>
 
-      <h3>VIP &amp; X Series — Samping &amp; Belakang</h3>
+      <h3 id="vip-amp-x-series-samping-amp-belakang">VIP &amp; X Series — Samping &amp; Belakang</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VIP dan X Series" tabindex="0">
         <table>
           <thead>
@@ -193,7 +195,7 @@
         </table>
       </div>
 
-      <h3>VRX Series — Non-Metal <span class="brand-accent">✅ Aman Sinyal</span></h3>
+      <h3 id="vrx-series-non-metal-span-classbrand-accent-aman-sinyalspan">VRX Series — Non-Metal <span class="brand-accent">✅ Aman Sinyal</span></h3>
       <p style="margin-bottom:12px;">Teknologi non-metal khusus — tidak mengganggu sinyal GPS, HP, atau radio. IR tetap tinggi di 96%.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VRX Series" tabindex="0">
         <table>
@@ -218,11 +220,11 @@
     <div class="container">
       <div class="section-header">
         <div class="hero-tag">Merek #2</div>
-        <h2>🟠 Solar Gard</h2>
+        <h2 id="solar-gard">🟠 Solar Gard</h2>
         <p>Produk dari <strong>Saint-Gobain</strong> (Prancis, 350+ tahun). Multi Sputtering Technology dengan 9 lapisan metal eksotis. Tersedia juga Black Phantom dengan Nano Ceramic untuk yang peduli sinyal.</p>
       </div>
 
-      <h3>LX Series — Flagship (Multi Sputtering 9 Layer)</h3>
+      <h3 id="lx-series-flagship-multi-sputtering-9-layer">LX Series — Flagship (Multi Sputtering 9 Layer)</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard LX Series" tabindex="0">
         <table>
           <thead>
@@ -236,7 +238,7 @@
         </table>
       </div>
 
-      <h3>Platinum Series (HP Series)</h3>
+      <h3 id="platinum-series-hp-series">Platinum Series (HP Series)</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard Platinum Series" tabindex="0">
         <table>
           <thead>
@@ -251,7 +253,7 @@
         </table>
       </div>
 
-      <h3>Black Phantom — Nano Ceramic <span class="brand-accent">✅ Aman Sinyal</span></h3>
+      <h3 id="black-phantom-nano-ceramic-span-classbrand-accent-aman-sinyalspan">Black Phantom — Nano Ceramic <span class="brand-accent">✅ Aman Sinyal</span></h3>
       <p style="margin-bottom:12px;">Advanced Nano Ceramic Technology — solid black, tidak ganggu sinyal.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard Black Phantom" tabindex="0">
         <table>
@@ -274,11 +276,11 @@
     <div class="container">
       <div class="section-header">
         <div class="hero-tag">Merek #3</div>
-        <h2>🔴 3M</h2>
+        <h2 id="3m">🔴 3M</h2>
         <p>Raksasa teknologi asal AS (1902). Kaca film 3M terkenal dengan inovasi <strong>multilayer optical film</strong> — 200+ layer nano teknologi. Sebagian besar seri <strong>non-metal</strong>, jadi aman untuk sinyal GPS/HP. Garansi resmi 5 tahun.</p>
       </div>
 
-      <h3>3M Crystalline — Flagship (Non-Metal ✅, IR 97%)</h3>
+      <h3 id="3m-crystalline-flagship-non-metal-ir-97">3M Crystalline — Flagship (Non-Metal ✅, IR 97%)</h3>
       <p style="margin-bottom:12px;">Teknologi multilayer optical film 200+ layer. IR 97% di hampir semua varian. Non-metal, sinyal aman.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Crystalline" tabindex="0">
         <table>
@@ -294,7 +296,7 @@
         </table>
       </div>
 
-      <h3>3M Black Beauty — Entry Level (Non-Metal ✅)</h3>
+      <h3 id="3m-black-beauty-entry-level-non-metal">3M Black Beauty — Entry Level (Non-Metal ✅)</h3>
       <p style="margin-bottom:12px;">Non-metal, tidak ganggu sinyal. Entry level dari 3M.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Black Beauty" tabindex="0">
         <table>
@@ -309,7 +311,7 @@
         </table>
       </div>
 
-      <h3>3M Black Chrome — TSER Tinggi (Metal ⚠️)</h3>
+      <h3 id="3m-black-chrome-tser-tinggi-metal">3M Black Chrome — TSER Tinggi (Metal ⚠️)</h3>
       <p style="margin-bottom:12px;">Teknologi metalik — TSER tinggi sampai 72%, tapi <strong>bisa ganggu sinyal</strong>.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Black Chrome" tabindex="0">
         <table>
@@ -324,7 +326,7 @@
         </table>
       </div>
 
-      <h3>3M Obsidian — Varian VLT Terlengkap (Non-Metal ✅)</h3>
+      <h3 id="3m-obsidian-varian-vlt-terlengkap-non-metal">3M Obsidian — Varian VLT Terlengkap (Non-Metal ✅)</h3>
       <p style="margin-bottom:12px;">Mulai VLT 8% sampai 78%, non-metal. TSER rendah (23-44%), cocok untuk yang prioritas varian keteduhan bukan performa panas.</p>
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Obsidian" tabindex="0">
         <table>
@@ -343,7 +345,7 @@
         </table>
       </div>
 
-      <h3>3M Color Stable —Non-Metal ✅ (Entry Level)</h3>
+      <h3 id="3m-color-stable-non-metal-entry-level">3M Color Stable —Non-Metal ✅ (Entry Level)</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Color Stable" tabindex="0">
         <table>
           <thead>
@@ -369,11 +371,11 @@
     <div class="container">
       <div class="section-header">
         <div class="hero-tag">Merek #4</div>
-        <h2>🟣 Kori</h2>
+        <h2 id="kori">🟣 Kori</h2>
         <p>Merek lokal Indonesia dari <strong>PT Sedjuk Makmur Abadi</strong>. Kaca film otomotif dengan spesifikasi transparan dan jujur — mencantumkan IRR di 2 panjang gelombang (940nm &amp; 1400nm) serta TSER. Tersedia 3 series: <strong>Ultra</strong> (flagship), <strong>Premium</strong> (mid), dan <strong>Classic</strong> (entry).</p>
       </div>
 
-      <h3>Ultra — Flagship <span class="brand-accent">⭐ TSER Tertinggi!</span></h3>
+      <h3 id="ultra-flagship-span-classbrand-accent-tser-tertinggispan">Ultra — Flagship <span class="brand-accent">⭐ TSER Tertinggi!</span></h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Ultra" tabindex="0">
         <table>
           <thead>
@@ -388,7 +390,7 @@
         </table>
       </div>
 
-      <h3>Premium</h3>
+      <h3 id="premium">Premium</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Premium" tabindex="0">
         <table>
           <thead>
@@ -404,7 +406,7 @@
         </table>
       </div>
 
-      <h3>Classic</h3>
+      <h3 id="classic">Classic</h3>
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Classic" tabindex="0">
         <table>
           <thead>
@@ -430,7 +432,7 @@
   <section class="section" id="perbandingan" aria-label="Perbandingan antar merek">
     <div class="container">
       <div class="section-header">
-        <h2>📊 Perbandingan Cepat Antar Merek</h2>
+        <h2 id="perbandingan-cepat-antar-merek">📊 Perbandingan Cepat Antar Merek</h2>
         <p>Ringkasan keunggulan masing-masing merek.</p>
       </div>
       <div class="table-wrap" role="region" aria-label="Ringkasan perbandingan merek" tabindex="0">
@@ -525,7 +527,7 @@
   <section class="section" id="rekomendasi" aria-label="Rekomendasi berdasarkan posisi kaca">
     <div class="container">
       <div class="section-header">
-        <h2>🏆 Rekomendasi untuk MG S5 EV</h2>
+        <h2 id="rekomendasi-untuk-mg-s5-ev">🏆 Rekomendasi untuk MG S5 EV</h2>
         <p>MG S5 EV punya <strong>panoramic roof</strong> yang luas — pemilihan kaca film untuk atap butuh keseimbangan antara view langit dan kenyamanan termal.</p>
       </div>
 
@@ -533,11 +535,11 @@
         <p><strong>💡 Tips untuk EV:</strong> Kabin MG S5 EV yang adem berarti <strong>AC bekerja lebih ringan</strong> → konsumsi listrik lebih hemat → jarak tempuh (range) lebih jauh. Jangan remehkan efek kaca film terhadap efisiensi EV!</p>
       </div>
 
-      <h2 style="margin-top:0;">🚗 Kaca Depan (Windshield)</h2>
+      <h2 style="margin-top:0;" id="kaca-depan-windshield">🚗 Kaca Depan (Windshield)</h2>
       <div class="spec-grid" style="margin-bottom:40px;">
         <article class="card" style="border-color:var(--accent);">
           <div class="label">🥇 Best Spec — Paling Adem & Aman</div>
-          <h3>3M Crystalline CR70</h3>
+          <h3 id="3m-crystalline-cr70">3M Crystalline CR70</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val accent-value">~70%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val accent-value">97%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">50%</span></div>
@@ -546,7 +548,7 @@
         </article>
         <article class="card" style="border-color:rgba(234,179,8,0.3);">
           <div class="label">🥇 Lolos Tilang</div>
-          <h3>Solar Gard LX 70</h3>
+          <h3 id="solar-gard-lx-70">Solar Gard LX 70</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val accent-value">72%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val">95%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">55%</span></div>
@@ -554,7 +556,7 @@
         </article>
         <article class="card">
           <div class="label">🥇 Lolos Tilang — VLT Tertinggi</div>
-          <h3>Kori Classic 75</h3>
+          <h3 id="kori-classic-75">Kori Classic 75</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val accent-value">74%</span></div>
           <div class="spec-row"><span class="key">IRR</span><span class="val">80-92%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">50%</span></div>
@@ -562,7 +564,7 @@
         </article>
         <article class="card" style="grid-column:1/-1;border-color:rgba(239,68,68,0.5);">
           <div class="label">⚠️ Risiko Tilang — Kalau Mau Lebih Gelap</div>
-          <h3>Kori Ultra 50</h3>
+          <h3 id="kori-ultra-50">Kori Ultra 50</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val accent-value">49%</span></div>
           <div class="spec-row"><span class="key">IRR</span><span class="val accent-value">97-99%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">61%</span></div>
@@ -571,11 +573,11 @@
         </article>
       </div>
 
-      <h2>🚗 Kaca Samping &amp; Belakang</h2>
+      <h2 id="kaca-samping-amp-belakang">🚗 Kaca Samping &amp; Belakang</h2>
       <div class="spec-grid" style="margin-bottom:40px;">
         <article class="card" style="border-color:rgba(234,179,8,0.3);">
           <div class="label">🥇 Paling Adem</div>
-          <h3>Kori Ultra 05</h3>
+          <h3 id="kori-ultra-05">Kori Ultra 05</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">5%</span></div>
           <div class="spec-row"><span class="key">IRR</span><span class="val accent-value">97-99%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val accent-value">81%</span></div>
@@ -583,7 +585,7 @@
         </article>
         <article class="card" style="border-color:var(--accent);">
           <div class="label">🥈 Kedua Teradem</div>
-          <h3>V-KOOL VK10</h3>
+          <h3 id="v-kool-vk10">V-KOOL VK10</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">13%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val accent-value">98%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val accent-value">74%</span></div>
@@ -591,7 +593,7 @@
         </article>
         <article class="card" style="border-color:rgba(34,197,94,0.2);">
           <div class="label">✅ Paling Aman Sinyal</div>
-          <h3>3M Crystalline CR20 / VRX15</h3>
+          <h3 id="3m-crystalline-cr20-vrx15">3M Crystalline CR20 / VRX15</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">~20% / 21%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val accent-value">97% / 96%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">62% / 63%</span></div>
@@ -599,7 +601,7 @@
         </article>
         <article class="card">
           <div class="label">Alternatif TSER Tinggi</div>
-          <h3>Solar Gard Black Premium 10</h3>
+          <h3 id="solar-gard-black-premium-10">Solar Gard Black Premium 10</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">9%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val">92%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val accent-value">70%</span></div>
@@ -607,12 +609,12 @@
         </article>
       </div>
 
-      <h2>☀️ Panoramic Roof / Sunroof</h2>
+      <h2 id="panoramic-roof-sunroof">☀️ Panoramic Roof / Sunroof</h2>
       <p style="margin-bottom:16px;">MG S5 EV punya panoramic roof luas. Butuh keseimbangan — VLT 35–60% biar view langit tetap keliatan, IR tinggi biar kabin tetap adem.</p>
       <div class="spec-grid">
         <article class="card" style="border-color:var(--accent);">
           <div class="label">🥇 Terbaik — Paling Seimbang</div>
-          <h3>Kori Ultra 35 / Premium 35</h3>
+          <h3 id="kori-ultra-35-premium-35">Kori Ultra 35 / Premium 35</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">36% / 35%</span></div>
           <div class="spec-row"><span class="key">IRR</span><span class="val accent-value">97-99% / 94-98%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val accent-value">66% / 65%</span></div>
@@ -620,7 +622,7 @@
         </article>
         <article class="card" style="border-color:rgba(234,179,8,0.3);">
           <div class="label">🥈 Premium</div>
-          <h3>V-KOOL VK30</h3>
+          <h3 id="v-kool-vk30">V-KOOL VK30</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">36%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val accent-value">98%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val accent-value">66%</span></div>
@@ -628,7 +630,7 @@
         </article>
         <article class="card" style="border-color:rgba(34,197,94,0.2);">
           <div class="label">✅ Aman Sinyal</div>
-          <h3>3M Crystalline CR60 / VRX60</h3>
+          <h3 id="3m-crystalline-cr60-vrx60">3M Crystalline CR60 / VRX60</h3>
           <div class="spec-row"><span class="key">VLT</span><span class="val">~60% / 58%</span></div>
           <div class="spec-row"><span class="key">IR</span><span class="val accent-value">97% / 96%</span></div>
           <div class="spec-row"><span class="key">TSER</span><span class="val">53%</span></div>
@@ -642,14 +644,14 @@
   <section class="section" aria-label="Set rekomendasi lengkap">
     <div class="container">
       <div class="section-header">
-        <h2>🎯 Set Rekomendasi Lengkap</h2>
+        <h2 id="set-rekomendasi-lengkap">🎯 Set Rekomendasi Lengkap</h2>
         <p>Pilih sesuai prioritas kamu.</p>
       </div>
 
       <div class="chapters">
         <article class="chapter" style="border-color:rgba(234,179,8,0.4);">
           <div class="chapter-num">🏆 Performa Maksimal</div>
-          <h3>V-KOOL Campuran</h3>
+          <h3 id="v-kool-campuran">V-KOOL Campuran</h3>
           <p><strong>Depan:</strong> VK70 (VLT 70%, lolos tilang)<br><strong>Samping:</strong> VK10 (TSER 74%, paling adem)<br><strong>Sunroof:</strong> VK30 (VLT 36%, IR 98%)</p>
           <p>Tolak panas tertinggi di kelas metal sputtering — XIR® Technology. ⚠️ VK Series ganggu sinyal.</p>
           <ul><li>TSER 74%</li><li>XIR® Technology</li><li>Sinyal ❌</li></ul>
@@ -657,7 +659,7 @@
 
         <article class="chapter" style="border-color:rgba(34,197,94,0.3);">
           <div class="chapter-num">🏆 Prioritas Sinyal</div>
-          <h3>V-KOOL VRX All Non-Metal</h3>
+          <h3 id="v-kool-vrx-all-non-metal">V-KOOL VRX All Non-Metal</h3>
           <p><strong>Depan &amp; Sunroof:</strong> VRX60 (VLT 58%, IR 96%)<br><strong>Samping:</strong> VRX15 (VLT 21%, IR 96%)</p>
           <p>Non-metal 100%, sinyal GPS/HP lancar. IR 96% masih sangat tinggi.</p>
           <ul><li>IR 96%</li><li>Sinyal ✅</li><li>Non-Metal</li></ul>
@@ -665,7 +667,7 @@
 
         <article class="chapter" style="border-color:rgba(234,179,8,0.4);">
           <div class="chapter-num">🏆 Kombinasi Merek — Spek Terbaik</div>
-          <h3>LX 70 · Ultra 05 · VK30</h3>
+          <h3 id="lx-70-ultra-05-vk30">LX 70 · Ultra 05 · VK30</h3>
           <p><strong>Depan:</strong> Solar Gard LX 70 (VLT 72% paling terang, IR 95%, TSER 55%, lolos tilang)<br><strong>Samping:</strong> Kori Ultra 05 (TSER 81% 🔥 juara global)<br><strong>Sunroof:</strong> V-KOOL VK30 (VLT 36%, IR 98%)</p>
           <p>Racikan spek tertinggi di tiap posisi dari berbagai merek. ⚠️ LX 70 &amp; VK30 metal — sinyal bisa terganggu.</p>
           <ul><li>TSER 81% samping 🔥</li><li>Depan tilang aman ✅</li><li>⚠️ Metal (LX 70, VK30)</li></ul>
@@ -673,7 +675,7 @@
 
         <article class="chapter" style="border-color:rgba(34,197,94,0.4);">
           <div class="chapter-num">🏆 Kombinasi Merek — Aman Sinyal</div>
-          <h3>CR70 · Ultra 05 · Ultra 35</h3>
+          <h3 id="cr70-ultra-05-ultra-35">CR70 · Ultra 05 · Ultra 35</h3>
           <p><strong>Depan:</strong> 3M Crystalline CR70 (VLT ~70%, IR 97%, non-metal, lolos tilang)<br><strong>Samping:</strong> Kori Ultra 05 (TSER 81% 🔥 juara global, non-metal)<br><strong>Sunroof:</strong> Kori Ultra 35 (VLT 36%, TSER 66%, non-metal)</p>
           <p>Versi aman sinyal dari racikan spek tertinggi — 100% non-metal, sinyal GPS/HP lancar tanpa mengorbankan performa.</p>
           <ul><li>TSER 81% samping 🔥</li><li>IR 97% depan</li><li>Sinyal ✅ 100% non-metal</li></ul>
@@ -681,7 +683,7 @@
 
         <article class="chapter" style="border-color:rgba(34,197,94,0.4);">
           <div class="chapter-num">🏆 Non-Metal Premium</div>
-          <h3>3M Crystalline</h3>
+          <h3 id="3m-crystalline">3M Crystalline</h3>
           <p><strong>Depan:</strong> Crystalline CR70 (VLT ~70%, IR 97%, lolos tilang + non-metal)<br><strong>Samping:</strong> Crystalline CR20 (IR 97%, non-metal)<br><strong>Sunroof:</strong> Crystalline CR60 (IR 97%, non-metal)</p>
           <p>IR 97% semua posisi, non-metal semua — sinyal GPS/HP lancar. Paling premium untuk yang prioritas sinyal + performa.</p>
           <ul><li>IR 97% semua sisi</li><li>Sinyal ✅</li><li>Non-Metal ✅</li></ul>
@@ -689,7 +691,7 @@
 
         <article class="chapter" style="border-color:#a855f7;">
           <div class="chapter-num">🏆 TSER Juara</div>
-          <h3>Kori All Ultra + Classic 75</h3>
+          <h3 id="kori-all-ultra-classic-75">Kori All Ultra + Classic 75</h3>
           <p><strong>Depan:</strong> Classic 75 (VLT 74%, lolos tilang)<br><strong>Samping:</strong> Ultra 05 (TSER 81% 🔥) atau Ultra 15 (TSER 74%)<br><strong>Sunroof:</strong> Ultra 35 (TSER 66%)</p>
           <p>TSER TERTINGGI di samping (81%!), lolos tilang depan, performa sunroof setara VK30. Semua seri non-metal — sinyal GPS/HP aman. Merek lokal Indonesia.</p>
           <ul><li>TSER 81% samping 🔥</li><li>Depan tilang aman ✅</li><li>Sinyal ✅ Non-metal</li><li>Merek lokal 🇮🇩</li></ul>
@@ -697,7 +699,7 @@
 
         <article class="chapter" style="border-color:rgba(239,68,68,0.5);">
           <div class="chapter-num">⚠️ Depan Lebih Gelap — Risiko Tilang</div>
-          <h3>Kori All Ultra</h3>
+          <h3 id="kori-all-ultra">Kori All Ultra</h3>
           <p><strong>Depan:</strong> Ultra 50 (VLT 49%, TSER 61%)<br><strong>Samping:</strong> Ultra 05 (TSER 81% 🔥) atau Ultra 15 (TSER 74%)<br><strong>Sunroof:</strong> Ultra 35 (TSER 66%)</p>
           <p>Depan di bawah VLT 70% — <strong>berisiko tilang</strong>, tapi kompensasinya TSER tinggi + non-metal semua (sinyal aman). Satu merek = garansi &amp; konsistensi warna.</p>
           <ul><li>Depan VLT 49% ⚠️</li><li>TSER 81% samping 🔥</li><li>Sinyal ✅ Non-metal</li></ul>
@@ -710,32 +712,32 @@
   <section class="section" aria-label="Pertanyaan umum">
     <div class="container">
       <div class="section-header">
-        <h2>❓ Pertanyaan Umum</h2>
+        <h2 id="pertanyaan-umum">❓ Pertanyaan Umum</h2>
       </div>
 
       <div class="spec-grid">
         <article class="card">
-          <h3>Apakah kaca film memengaruhi sinyal GPS mobil?</h3>
+          <h3 id="apakah-kaca-film-memengaruhi-sinyal-gps-mobil">Apakah kaca film memengaruhi sinyal GPS mobil?</h3>
           <p>Ya, terutama kaca film berbahan <strong>metal sputtering</strong> (V-KOOL VK series, Solar Gard LX, 3M Black Chrome). Semakin banyak lapisan logam, semakin besar potensi gangguan. Pilih <strong>non-metal</strong> (3M Crystalline / Black Beauty / Obsidian, V-KOOL VRX, <strong>Kori semua seri</strong>) atau <strong>nano ceramic</strong> (Solar Gard Black Phantom) jika sinyal adalah prioritas. Keunggulan 3M: sebagian besar seri non-metal.</p>
         </article>
         <article class="card">
-          <h3>Berapa VLT minimal untuk kaca depan di Indonesia?</h3>
+          <h3 id="berapa-vlt-minimal-untuk-kaca-depan-di-indonesia">Berapa VLT minimal untuk kaca depan di Indonesia?</h3>
           <p>Aturan di Indonesia: kaca depan minimal <strong>VLT 70%</strong>. Produk yang lolos: Solar Gard LX 70 (72%), 3M Crystalline CR70 (~70%), dan V-KOOL VK70 (70%). Yang lain di bawah 70% — risiko tilang.</p>
         </article>
         <article class="card">
-          <h3>Apakah kaca film berpengaruh ke konsumsi listrik EV?</h3>
+          <h3 id="apakah-kaca-film-berpengaruh-ke-konsumsi-listrik-ev">Apakah kaca film berpengaruh ke konsumsi listrik EV?</h3>
           <p><strong>Sangat.</strong> MG S5 EV adalah mobil listrik — AC yang lebih ringan karena kabin adem berarti <strong>hemat baterai</strong> dan <strong>jarak tempuh lebih jauh</strong>. Kaca film dengan IR tinggi &amp; TSER tinggi adalah investasi yang balik modal lewat efisiensi energi.</p>
         </article>
         <article class="card">
-          <h3>Mana yang lebih penting, IR atau TSER?</h3>
+          <h3 id="mana-yang-lebih-penting-ir-atau-tser">Mana yang lebih penting, IR atau TSER?</h3>
           <p><strong>IR</strong> (Infra Red Rejection) adalah yang paling krusial untuk iklim tropis karena infra merah adalah sumber panas utama. <strong>TSER</strong> lebih komprehensif (gabungan IR + UV + cahaya). Dua-duanya penting — IR untuk rasa adem, TSER untuk efisiensi energi total.</p>
         </article>
         <article class="card">
-          <h3>Apakah panoramic roof MG S5 EV perlu kaca film?</h3>
+          <h3 id="apakah-panoramic-roof-mg-s5-ev-perlu-kaca-film">Apakah panoramic roof MG S5 EV perlu kaca film?</h3>
           <p><strong>Sangat dianjurkan.</strong> Atap kaca panoramic menerima sinar matahari langsung — tanpa kaca film, kabin bisa menjadi sangat panas. Pilih VLT 35–60% agar view langit tetap keliatan, IR minimal 95% biar tetap adem.</p>
         </article>
         <article class="card">
-          <h3>Boleh kombinasi merek berbeda?</h3>
+          <h3 id="boleh-kombinasi-merek-berbeda">Boleh kombinasi merek berbeda?</h3>
           <p><strong>Boleh.</strong> Banyak pemilik mobil justru mengkombinasikan merek berbeda — misal <strong>depan pakai Solar Gard LX 70</strong> (lolos tilang) + <strong>samping pakai V-KOOL VK10</strong> (TSER 74% — tertinggi kedua setelah Kori Ultra 05). Yang penting adalah performa sesuai kebutuhan di setiap posisi.</p>
         </article>
       </div>
@@ -751,5 +753,15 @@
   </div>
 </footer>
 
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pencarian situs">
+  <div class="search-modal-panel">
+    <div class="search-modal-head">
+      <span class="sm-title">🔍 Cari di panduan MG S5 EV</span>
+      <button type="button" class="search-modal-close" id="search-modal-close" aria-label="Tutup pencarian">&times;</button>
+    </div>
+    <div id="search-modal-panel"></div>
+  </div>
+</div>
+<script src="search.js"></script>
 </body>
 </html>

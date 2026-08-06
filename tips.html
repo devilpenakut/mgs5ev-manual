@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="search.css">>
 </head>
 <body>
 
@@ -38,6 +39,7 @@
         <a href="masalah.html">Masalah</a>
         <a href="kacafilm.html">Kaca Film</a>
         <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+<button type="button" class="search-toggle" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-label="Buka pencarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg> Cari</button>
       </div>
     </div>
   </div>
@@ -58,20 +60,21 @@
 <section class="section section-tight">
   <div class="container">
     <div class="tips-grid">
-      <div class="tip-card"><h3>🔊 Suara &amp; Alarm</h3><p>Notifikasi kendaraan bisa diatur lewat layar infotainment — termasuk volume, jenis suara, dan preferensi peringatan.</p></div>
-      <div class="tip-card"><h3>🕵️ Fitur Tersembunyi</h3><p>Gestur dua jari di layar AC untuk atur suhu dan blower bersamaan, long press tombol OK untuk reset trip, posisi start cadangan untuk kunci lemah, dan aplikasi built-in pada konfigurasi yang mendukung.</p></div>
-      <div class="tip-card"><h3>🔌 Port USB &amp; Wireless Charging</h3><p><strong>4 USB port</strong>: USB depan (data + charging), USB belakang (5V ⚡3A), USB spion tengah (5V ⚡2A, khusus dashcam), dan 1 port lagi. <strong>Wireless charging</strong> pad di konsol tengah pada varian Magnify — pastikan HP di tengah, support Qi.</p></div>
-      <div class="tip-card"><h3>📱 i-SMART dari Ponsel</h3><p>Temukan mobil di parkiran, nyalakan AC sebelum masuk, jadwalkan charging, dan akses buku pemilik digital langsung dari aplikasi. Download: <a href="https://play.google.com/store/apps/details?id=com.saicmotor.iov.indonesian" target="_blank" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/id/app/mg-i-smart/id1560301186" target="_blank" rel="noopener">App Store</a></p></div>
-      <div class="tip-card"><h3>⚡ Equalisation Charging</h3><p>Sambungkan charger AC dan biarkan tetap terhubung setelah 100%. BMS akan menyeimbangkan tegangan semua sel baterai secara otomatis.</p></div>
-      <div class="tip-card"><h3>🌆 One Pedal Mode</h3><p>Aktifkan One Pedal Mode untuk regenerasi maksimal saat lepas akselerator. Cocok untuk macet kota dan membantu mengurangi penggunaan rem.</p><p>⚠️ <strong>Peringatan safety:</strong> Setelah pengereman darurat (hard stop) di mode OPD, <strong>tahan pedal rem 2-3 detik</strong> hingga ikon Auto-hold (A) hijau muncul di dashboard sebelum melepas. Jika dilepas terlalu cepat, mobil bisa mundur bertenaga 6-10 meter — ini bug software yang sudah dikonfirmasi pemilik global. Lihat halaman <a href="masalah.html">Masalah & Isu</a> untuk detail.</p></div>
-      <div class="tip-card"><h3>🌡️ AC Gesture Dua Jari</h3><p>Gunakan dua jari di layar infotainment untuk mengatur suhu AC dan blower speed bersamaan tanpa harus membuka menu yang lebih dalam.</p></div>
-      <div class="tip-card"><h3>🔋 Parkir Lama</h3><p>Jika parkir lama, usahakan baterai di atas 50% dan isi ulang minimal tiap 3 bulan. Hindari meninggalkan SOC sangat rendah lebih dari 7 hari.</p></div>
-      <div class="tip-card"><h3>🛞 Tekanan Ban Optimal</h3><p>Jaga tekanan ban 2,5 bar (37 psi) untuk semua roda. Ban kurang angin akan memukul efisiensi dan mempercepat keausan tidak merata.</p></div>
-      <div class="tip-card"><h3>❄️ Mode Snow</h3><p>Mode Snow membatasi torsi awal untuk traksi lebih stabil di jalan licin atau hujan deras.</p></div>
-      <div class="tip-card"><h3>🔑 Start Cadangan</h3><p>Jika smart key tidak terdeteksi karena baterai habis, tempelkan kunci ke posisi start cadangan yang ditandai di konsol tengah.</p></div>
-      <div class="tip-card"><h3>⭐ Tombol Favorit (Setir)</h3><p>Tombol bintang (*) di setir kiri bisa diprogram sebagai pintasan cepat — atur di Settings → Vehicle → Favorite Button. Fungsinya bisa diganti: kamera 360°, mode berkendara, atau panggilan kontak favorit. Tombol favorit di layar infotainment juga bisa disesuaikan.</p></div>
-      <div class="tip-card"><h3>🎚️ Equalizer Audio</h3><p>Atur profil suara lewat Settings → Sound → Equalizer. Tersedia preset: Normal, Classical, Jazz, Pop, Rock, dan Custom. Untuk suara vokal lebih jernih, naikkan frekuensi menengah (~1–4 kHz). Untuk bass lebih dalam, naikkan low frequency (~60–200 Hz). Setelan tersimpan per profil pengguna.</p></div>
-      <div class="tip-card"><h3>🔗 Manual Release Kabel Charging</h3><p>Jika kabel charging tidak mau lepas setelah tombol ditekan, buka bagasi, cari tali manual release berwarna <strong>oranye</strong> di dekat port charging (sisi kiri dalam bagasi). Tarik perlahan untuk membuka kunci port secara mekanis. Ini prosedur darurat — gunakan hanya jika kabel benar-benar macet.</p></div>
+      <div class="tip-card"><h3 id="suara-amp-alarm">🔊 Suara &amp; Alarm</h3><p>Notifikasi kendaraan bisa diatur lewat layar infotainment — termasuk volume, jenis suara, dan preferensi peringatan.</p></div>
+      <div class="tip-card"><h3 id="fitur-tersembunyi">🕵️ Fitur Tersembunyi</h3><p>Gestur dua jari di layar AC untuk atur suhu dan blower bersamaan, long press tombol OK untuk reset trip, posisi start cadangan untuk kunci lemah, dan aplikasi built-in pada konfigurasi yang mendukung.</p></div>
+      <div class="tip-card"><h3 id="port-usb-amp-wireless-charging">🔌 Port USB &amp; Wireless Charging</h3><p><strong>4 USB port</strong>: USB depan (data + charging), USB belakang (5V ⚡3A), USB spion tengah (5V ⚡2A, khusus dashcam), dan 1 port lagi. <strong>Wireless charging</strong> pad di konsol tengah pada varian Magnify — pastikan HP di tengah, support Qi.</p></div>
+      <div class="tip-card"><h3 id="i-smart-dari-ponsel">📱 i-SMART dari Ponsel</h3><p>Temukan mobil di parkiran, nyalakan AC sebelum masuk, jadwalkan charging, dan akses buku pemilik digital langsung dari aplikasi. Download: <a href="https://play.google.com/store/apps/details?id=com.saicmotor.iov.indonesian" target="_blank" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/id/app/mg-i-smart/id1560301186" target="_blank" rel="noopener">App Store</a></p></div>
+      <div class="tip-card"><h3 id="equalisation-charging">⚡ Equalisation Charging</h3><p>Sambungkan charger AC dan biarkan tetap terhubung setelah 100%. BMS akan menyeimbangkan tegangan semua sel baterai secara otomatis.</p></div>
+      <div class="tip-card"><h3 id="one-pedal-mode">🌆 One Pedal Mode</h3><p>Aktifkan One Pedal Mode untuk regenerasi maksimal saat lepas akselerator. Cocok untuk macet kota dan membantu mengurangi penggunaan rem.</p><p>⚠️ <strong>Peringatan safety:</strong> Setelah pengereman darurat (hard stop) di mode OPD, <strong>tahan pedal rem 2-3 detik</strong> hingga ikon Auto-hold (A) hijau muncul di dashboard sebelum melepas. Jika dilepas terlalu cepat, mobil bisa mundur bertenaga 6-10 meter — ini bug software yang sudah dikonfirmasi pemilik global. Lihat halaman <a href="masalah.html">Masalah & Isu</a> untuk detail.</p></div>
+      <div class="tip-card"><h3 id="ac-gesture-dua-jari">🌡️ AC Gesture Dua Jari</h3><p>Gunakan dua jari di layar infotainment untuk mengatur suhu AC dan blower speed bersamaan tanpa harus membuka menu yang lebih dalam.</p></div>
+      <div class="tip-card"><h3 id="parkir-lama">🔋 Parkir Lama</h3><p>Jika parkir lama, usahakan baterai di atas 50% dan isi ulang minimal tiap 3 bulan. Hindari meninggalkan SOC sangat rendah lebih dari 7 hari.</p></div>
+      <div class="tip-card"><h3 id="tekanan-ban-optimal">🛞 Tekanan Ban Optimal</h3><p>Jaga tekanan ban 2,5 bar (37 psi) untuk semua roda. Ban kurang angin akan memukul efisiensi dan mempercepat keausan tidak merata.</p></div>
+      <div class="tip-card"><h3 id="mode-snow">❄️ Mode Snow</h3><p>Mode Snow membatasi torsi awal untuk traksi lebih stabil di jalan licin atau hujan deras.</p></div>
+      <div class="tip-card"><h3 id="start-cadangan">🔑 Start Cadangan</h3><p>Jika smart key tidak terdeteksi karena baterai habis, tempelkan kunci ke posisi start cadangan yang ditandai di konsol tengah.</p></div>
+      <div class="tip-card"><h3 id="tombol-favorit-setir">⭐ Tombol Favorit (Setir)</h3><p>Tombol bintang (*) di setir kiri bisa diprogram sebagai pintasan cepat — atur di Settings → Vehicle → Favorite Button. Fungsinya bisa diganti: kamera 360°, mode berkendara, atau panggilan kontak favorit. Tombol favorit di layar infotainment juga bisa disesuaikan.</p></div>
+      <div class="tip-card"><h3 id="equalizer-audio">🎚️ Equalizer Audio</h3><p>Atur profil suara lewat Settings → Sound → Equalizer. Tersedia preset: Normal, Classical, Jazz, Pop, Rock, dan Custom. Untuk suara vokal lebih jernih, naikkan frekuensi menengah (~1–4 kHz). Untuk bass lebih dalam, naikkan low frequency (~60–200 Hz). Setelan tersimpan per profil pengguna.</p></div>
+      <div class="tip-card"><h3 id="manual-release-kabel-charging">🔗 Manual Release Kabel Charging</h3><p>Jika kabel charging tidak mau lepas setelah tombol ditekan, buka bagasi, cari tali manual release berwarna <strong>oranye</strong> di dekat port charging (sisi kiri dalam bagasi). Tarik perlahan untuk membuka kunci port secara mekanis. Ini prosedur darurat — gunakan hanya jika kabel benar-benar macet.</p></div>
+      <div class="tip-card"><h3 id="matikan-wiper-otomatis">🌧️ Matikan Wiper Otomatis</h3><p>Lever wiper adalah saklar bertingkat (notch). Wiper otomatis aktif saat lever didorong <strong>naik satu notch dari posisi OFF ke posisi Intermittent/Automatic</strong> — lever tetap menempel di posisi itu, jadi otomatis terus aktif. Untuk mematikan, dorong lever <strong>turun kembali satu notch ke posisi OFF</strong>. Manual resmi menyarankan mematikan mode otomatis saat tidak hujan agar wiper tidak menyapu kaca kering.</p><p>Naik satu notch lagi = wiper pelan (2), naik lagi = wiper cepat (3); dorong ke bawah = sapu sekali (4); tarik ke arah setir = washer (6). Pada model <strong>tanpa</strong> rain sensor, putar switch (5) untuk mengatur <em>delay</em> otomatis (interval ikut berubah sesuai kecepatan). Pada model <strong>dengan</strong> rain sensor, switch (5) mengatur <em>sensitivitas</em> sensor di dasar spion tengah — makin sensitif makin pendek intervalnya.</p></div>
     </div>
   </div>
 </section>
@@ -82,5 +85,15 @@
   </div>
 </footer>
 
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pencarian situs">
+  <div class="search-modal-panel">
+    <div class="search-modal-head">
+      <span class="sm-title">🔍 Cari di panduan MG S5 EV</span>
+      <button type="button" class="search-modal-close" id="search-modal-close" aria-label="Tutup pencarian">&times;</button>
+    </div>
+    <div id="search-modal-panel"></div>
+  </div>
+</div>
+<script src="search.js"></script>
 </body>
 </html>

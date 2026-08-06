@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="search.css">>
 </head>
 <body>
 
@@ -38,6 +39,7 @@
         <a href="masalah.html">Masalah</a>
         <a href="kacafilm.html">Kaca Film</a>
         <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+<button type="button" class="search-toggle" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-label="Buka pencarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg> Cari</button>
       </div>
     </div>
   </div>
@@ -106,11 +108,19 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="section-header">
+    <div class="hero-tag">🔍 Pencarian</div>
+    <h2 id="cari-di-panduan-mg-s5-ev">Cari di Panduan MG S5 EV</h2>
+  </div>
+  <div id="hero-search" class="hero-search"></div>
+</div>
+
 <section class="section section-tight" id="varian">
   <div class="container">
     <div class="section-header">
       <div class="hero-tag">🏷️ Harga &amp; Varian</div>
-      <h2>Varian MG S5 EV Indonesia</h2>
+      <h2 id="varian-mg-s5-ev-indonesia">Varian MG S5 EV Indonesia</h2>
       <p>MG S5 EV tersedia dalam 3 varian berdasarkan data dari mgmotor.id.</p>
     </div>
     <div class="table-wrap">
@@ -171,7 +181,7 @@
   <div class="container">
     <div class="section-header">
       <div class="hero-tag">📐 Spesifikasi</div>
-      <h2>Spesifikasi Teknis</h2>
+      <h2 id="spesifikasi-teknis">Spesifikasi Teknis</h2>
     </div>
     <div class="spec-grid">
       <div class="card">
@@ -207,13 +217,13 @@
   <div class="container">
     <div class="section-header">
       <div class="hero-tag">📞 Kontak</div>
-      <h2>Kontak &amp; Sumber Daya</h2>
+      <h2 id="kontak-amp-sumber-daya">Kontak &amp; Sumber Daya</h2>
     </div>
     <div class="app-grid compact">
-      <div class="app-item"><h3>🌐 mgmotor.id</h3><p><a href="https://www.mgmotor.id" target="_blank" rel="noopener">mgmotor.id</a><br>Model, promo, dealer</p></div>
-      <div class="app-item"><h3>📱 i-SMART App</h3><p><a href="https://play.google.com/store/apps/details?id=com.saicmotor.iov.indonesian" target="_blank" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/id/app/mg-i-smart/id1560301186" target="_blank" rel="noopener">App Store</a><br>Kontrol &amp; manual digital</p></div>
-      <div class="app-item"><h3>📍 Cari Dealer</h3><p><a href="https://www.mgmotor.id/mgdealer" target="_blank" rel="noopener">mgmotor.id/mgdealer</a><br>Test drive &amp; konsultasi</p></div>
-      <div class="app-item"><h3>📄 Brosur</h3><p>Download dari website<br>Semua varian MG S5 EV</p></div>
+      <div class="app-item"><h3 id="mgmotorid">🌐 mgmotor.id</h3><p><a href="https://www.mgmotor.id" target="_blank" rel="noopener">mgmotor.id</a><br>Model, promo, dealer</p></div>
+      <div class="app-item"><h3 id="i-smart-app">📱 i-SMART App</h3><p><a href="https://play.google.com/store/apps/details?id=com.saicmotor.iov.indonesian" target="_blank" rel="noopener">Google Play</a> · <a href="https://apps.apple.com/id/app/mg-i-smart/id1560301186" target="_blank" rel="noopener">App Store</a><br>Kontrol &amp; manual digital</p></div>
+      <div class="app-item"><h3 id="cari-dealer">📍 Cari Dealer</h3><p><a href="https://www.mgmotor.id/mgdealer" target="_blank" rel="noopener">mgmotor.id/mgdealer</a><br>Test drive &amp; konsultasi</p></div>
+      <div class="app-item"><h3 id="brosur">📄 Brosur</h3><p>Download dari website<br>Semua varian MG S5 EV</p></div>
     </div>
   </div>
 </section>
@@ -225,5 +235,15 @@
   </div>
 </footer>
 
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pencarian situs">
+  <div class="search-modal-panel">
+    <div class="search-modal-head">
+      <span class="sm-title">🔍 Cari di panduan MG S5 EV</span>
+      <button type="button" class="search-modal-close" id="search-modal-close" aria-label="Tutup pencarian">&times;</button>
+    </div>
+    <div id="search-modal-panel"></div>
+  </div>
+</div>
+<script src="search.js"></script>
 </body>
 </html>

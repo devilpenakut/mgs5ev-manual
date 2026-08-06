@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="search.css">>
   <link rel="stylesheet" href="masalah.css">
 </head>
 <body>
@@ -39,6 +40,7 @@
         <a href="masalah.html" class="active">Masalah</a>
         <a href="kacafilm.html">Kaca Film</a>
         <a href="https://mgs5.flarum.cloud" target="_blank" rel="noopener" class="forum-link">💬 Forum</a>
+<button type="button" class="search-toggle" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-label="Buka pencarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg> Cari</button>
       </div>
     </div>
   </div>
@@ -63,13 +65,13 @@
   <section class="section section-top-sm" id="troubleshooting">
     <div class="issue-header">
       <span class="issue-cat">Panduan Solusi</span>
-      <h2>🔧 Panduan Troubleshooting Cepat</h2>
+      <h2 id="panduan-troubleshooting-cepat">🔧 Panduan Troubleshooting Cepat</h2>
     </div>
     <p class="section-intro">Masalah umum sehari-hari dan langkah cepat yang bisa dicoba sebelum menghubungi dealer.</p>
 
     <div class="trouble-grid">
       <div class="issue-card trouble-item">
-        <h3>🔑 Mobil Tidak Bisa Masuk READY</h3>
+        <h3 id="mobil-tidak-bisa-masuk-ready">🔑 Mobil Tidak Bisa Masuk READY</h3>
         <ul>
           <li>Pastikan smart key berada di dalam kabin</li>
           <li>Injak rem dengan kuat — sensor pedal rem kadang butuh tekanan penuh</li>
@@ -79,7 +81,7 @@
       </div>
 
       <div class="issue-card trouble-item">
-        <h3>🔌 Charging Tidak Berjalan</h3>
+        <h3 id="charging-tidak-berjalan">🔌 Charging Tidak Berjalan</h3>
         <ul>
           <li>Pastikan kabel charging terpasang penuh (terkunci)</li>
           <li>Periksa jadwal charging di i-SMART — mungkin sedang dalam mode jadwal tunda</li>
@@ -91,7 +93,7 @@
       </div>
 
       <div class="issue-card trouble-item">
-        <h3>📱 i-SMART Tidak Terhubung</h3>
+        <h3 id="i-smart-tidak-terhubung">📱 i-SMART Tidak Terhubung</h3>
         <ul>
           <li>Pastikan kendaraan memiliki koneksi data (4G) — cek ikon sinyal di infotainment</li>
           <li>Restart aplikasi i-SMART di HP</li>
@@ -101,7 +103,7 @@
       </div>
 
       <div class="issue-card trouble-item">
-        <h3>🔄 Reset Infotainment</h3>
+        <h3 id="reset-infotainment">🔄 Reset Infotainment</h3>
         <p>Cara reset cepat sistem infotainment tanpa kehilangan data:</p>
         <ol>
           <li>Tekan dan tahan tombol <strong>Home</strong> (atau tombol power) selama 10-15 detik</li>
@@ -112,7 +114,7 @@
       </div>
 
       <div class="issue-card trouble-item">
-        <h3>🔋 Aki 12V Habis Setelah Parkir Lama</h3>
+        <h3 id="aki-12v-habis-setelah-parkir-lama">🔋 Aki 12V Habis Setelah Parkir Lama</h3>
         <ul>
           <li>Mobil yang parkir lama (&gt;14 hari) akan menguras aki 12V meski tidak digunakan</li>
           <li>Jika memungkinkan, lepas kabel negatif aki 12V saat parkir panjang</li>
@@ -122,7 +124,7 @@
       </div>
 
       <div class="issue-card trouble-item">
-        <h3>🔧 Ganti Baterai Kunci (CR2032)</h3>
+        <h3 id="ganti-baterai-kunci-cr2032">🔧 Ganti Baterai Kunci (CR2032)</h3>
         <p>Smart key menggunakan baterai CR2032. Tanda baterai lemah:</p>
         <ul>
           <li>Jarak passive entry menurun drastis</li>
@@ -138,7 +140,7 @@
   <section class="section" id="aki-12v">
     <div class="issue-header">
       <span class="issue-cat">Aki 12V</span>
-      <h2>🔋 Kutub Aki Tidak Terkencang Pabrik</h2>
+      <h2 id="kutub-aki-tidak-terkencang-pabrik">🔋 Kutub Aki Tidak Terkencang Pabrik</h2>
     </div>
     <div class="issue-card">
       <div class="issue-meta">
@@ -161,11 +163,11 @@
   <section class="section" id="infotainment">
     <div class="issue-header">
       <span class="issue-cat">Infotainment</span>
-      <h2>📱 Masalah Sistem Infotainment</h2>
+      <h2 id="masalah-sistem-infotainment">📱 Masalah Sistem Infotainment</h2>
     </div>
 
     <div class="issue-card">
-      <h3>📞 HP Tiba-tiba Terputus &amp; Suara Pengemudi Hilang</h3>
+      <h3 id="hp-tiba-tiba-terputus-amp-suara-pengemudi-hilang">📞 HP Tiba-tiba Terputus &amp; Suara Pengemudi Hilang</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -179,7 +181,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🌗 Lampu Dashboard Tidak Menyesuaikan Siang/Malam</h3>
+      <h3 id="lampu-dashboard-tidak-menyesuaikan-siangmalam">🌗 Lampu Dashboard Tidak Menyesuaikan Siang/Malam</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -189,7 +191,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🌐 Terjemahan Bahasa Tidak Akurat</h3>
+      <h3 id="terjemahan-bahasa-tidak-akurat">🌐 Terjemahan Bahasa Tidak Akurat</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
@@ -198,7 +200,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🗺️ Navigasi &amp; Perencanaan Charging Bermasalah</h3>
+      <h3 id="navigasi-amp-perencanaan-charging-bermasalah">🗺️ Navigasi &amp; Perencanaan Charging Bermasalah</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -207,7 +209,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🖥️ Layar Infotainment Blank Total</h3>
+      <h3 id="layar-infotainment-blank-total">🖥️ Layar Infotainment Blank Total</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -217,7 +219,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>📻 Radio Mentok di Satu Stasiun &amp; "USB Tidak Dikenali"</h3>
+      <h3 id="radio-mentok-di-satu-stasiun-amp-usb-tidak-dikenali">📻 Radio Mentok di Satu Stasiun &amp; "USB Tidak Dikenali"</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -231,7 +233,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>📱 CarPlay Wireless Gagal Auto-Connect (Setelah Update iOS)</h3>
+      <h3 id="carplay-wireless-gagal-auto-connect-setelah-update-ios">📱 CarPlay Wireless Gagal Auto-Connect (Setelah Update iOS)</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -250,11 +252,11 @@
   <section class="section" id="adas">
     <div class="issue-header">
       <span class="issue-cat">ADAS</span>
-      <h2>🚗 Masalah Sistem Bantuan Pengemudi</h2>
+      <h2 id="masalah-sistem-bantuan-pengemudi">🚗 Masalah Sistem Bantuan Pengemudi</h2>
     </div>
 
     <div class="issue-card">
-      <h3>🚦 Adaptive Cruise Control (ACC)</h3>
+      <h3 id="adaptive-cruise-control-acc">🚦 Adaptive Cruise Control (ACC)</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -263,7 +265,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🛞 Lane Keep Assist (LKA)</h3>
+      <h3 id="lane-keep-assist-lka">🛞 Lane Keep Assist (LKA)</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -272,7 +274,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🪧 Road Sign Recognition</h3>
+      <h3 id="road-sign-recognition">🪧 Road Sign Recognition</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
@@ -281,7 +283,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>💥 Front Collision Warning (FCW)</h3>
+      <h3 id="front-collision-warning-fcw">💥 Front Collision Warning (FCW)</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-mid">Sedang</span>
       </div>
@@ -290,7 +292,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>👣 One Pedal Driving (OPD) — Safety Bug</h3>
+      <h3 id="one-pedal-driving-opd-safety-bug">👣 One Pedal Driving (OPD) — Safety Bug</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-critical">🔴 Serius</span>
         <span class="issue-tag">2025</span>
@@ -303,7 +305,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>👣 One Pedal Driving (OPD) — Regenerasi Tidak Konsisten</h3>
+      <h3 id="one-pedal-driving-opd-regenerasi-tidak-konsisten">👣 One Pedal Driving (OPD) — Regenerasi Tidak Konsisten</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
@@ -312,7 +314,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>📷 360° Camera — Tampangan Malam</h3>
+      <h3 id="360-camera-tampangan-malam">📷 360° Camera — Tampangan Malam</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
@@ -321,7 +323,7 @@
     </div>
 
     <div class="issue-card">
-      <h3>🛞 TPMS — Peringatan Fluktuatif</h3>
+      <h3 id="tpms-peringatan-fluktuatif">🛞 TPMS — Peringatan Fluktuatif</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-low">Ringan</span>
       </div>
@@ -334,12 +336,12 @@
   <section class="section" id="climate">
     <div class="issue-header">
       <span class="issue-cat">AC &amp; Climate</span>
-      <h2>🌡️ Masalah Sistem AC &amp; Recall R005</h2>
+      <h2 id="masalah-sistem-ac-amp-recall-r005">🌡️ Masalah Sistem AC &amp; Recall R005</h2>
     </div>
 
     <div class="issue-card is-recall">
       <div class="recall-badge">🔴 RECALL R005</div>
-      <h3>Kipas Pemanas (Heating Fan) — Recall R005</h3>
+      <h3 id="kipas-pemanas-heating-fan-recall-r005">Kipas Pemanas (Heating Fan) — Recall R005</h3>
       <div class="issue-meta">
         <span class="issue-tag severity-critical">Recall Resmi</span>
         <span class="issue-tag">2025</span>
@@ -365,5 +367,15 @@
   </div>
 </footer>
 
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pencarian situs">
+  <div class="search-modal-panel">
+    <div class="search-modal-head">
+      <span class="sm-title">🔍 Cari di panduan MG S5 EV</span>
+      <button type="button" class="search-modal-close" id="search-modal-close" aria-label="Tutup pencarian">&times;</button>
+    </div>
+    <div id="search-modal-panel"></div>
+  </div>
+</div>
+<script src="search.js"></script>
 </body>
 </html>
