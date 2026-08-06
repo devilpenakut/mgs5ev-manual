@@ -22,6 +22,7 @@
     var base = {
       showSubResults: true,
       showImages: false,
+      noWorker: true,
       translations: { clear_search: "Bersihkan", clear_filters: "Bersihkan", show_more: "Muat lebih", show_less: "Sembunyikan" }
     };
     // 1) Kotak besar di halaman utama (#hero-search)
