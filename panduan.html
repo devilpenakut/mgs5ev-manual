@@ -197,6 +197,96 @@
   </div>
 </section>
 
+<section class="section section-tight" id="panduan-acc" aria-labelledby="acc-title">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="acc-title">Panduan Khusus · Adaptive Cruise Control (ACC)</h2>
+      <p>Cara menyalakan, arti simbol di MID, mengatur jarak &amp; kecepatan, sampai kapan sistem mati sendiri — dari Buku Pemilik resmi (Hal. 238–246).</p>
+    </div>
+
+    <p><strong>TL;DR:</strong> ACC = "cruise control + radar". Mobil otomatis jaga kecepatan tetap, dan otomatis <em>ikut</em> kecepatan kendaraan di depan (ikut sampai berhenti). Fitur bantuan (comfort system) — bukan autopilot. Setir tetap kamu pegang, perhatian harus penuh.</p>
+
+    <h3>Simbol di MID: 1 ikon, 3 "wajah" yang berubah</h3>
+    <p>Ikon ACC yang sama berubah <strong>warna</strong> untuk memberi tahu statusnya. Ini yang paling sering bikin bingung — ingat pola <strong>abu → biru → putih</strong>:</p>
+
+    <div class="lamp-grid">
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/acc_standby.png" alt="Ikon ACC status standby" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">Standby — abu/gelap</div><div class="lamp-desc">ACC <strong>ON tapi belum jalan</strong>. Muncul setelah kamu short-press tombol Pilot. Di mode siang, lampu tampil warna gelap.</div></div></div>
+
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/acc_activated.png" alt="Ikon ACC status aktif" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">Aktif — BIRU</div><div class="lamp-desc">ACC <strong>pegang kendali</strong>. Terjadi setelah kamu tekan Knob. Saat ikut kendaraan di depan, muncul gambar skematik bemper mobil di depan di layar.</div></div></div>
+
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/ica_standby.png" alt="Ikon ICA status standby" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">ICA — standby</div><div class="lamp-desc">Mode <strong>ICA</strong> (Intelligent Cruise Assist = ACC + lane centring). Warna gelap = ON tapi belum aktif.</div></div></div>
+
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/ica_activated.png" alt="Ikon ICA status aktif" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">ICA — aktif</div><div class="lamp-desc">ICA aktif: selain jaga kecepatan &amp; jarak, mobil juga bantu <strong>rem di tengah lajur</strong>.</div></div></div>
+
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/cruise_standby.png" alt="Ikon cruise control biasa status standby" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">Cruise biasa — standby</div><div class="lamp-desc">Constant Speed Cruise (kecepatan tetap, <strong>tanpa</strong> radar mengikuti mobil depan). Gelap = standby.</div></div></div>
+
+      <div class="lamp-item"><div class="lamp-icon" style="background:#fff;border:1px solid var(--border);"><img src="img/acc/cruise_activated.png" alt="Ikon cruise control biasa status aktif" width="36" height="36" style="max-width:none;"></div><div><div class="lamp-name">Cruise biasa — aktif</div><div class="lamp-desc">Kecepatan tetap terjaga. Tidak otomatis mengerem karena kendaraan di depan lebih lambat.</div></div></div>
+    </div>
+
+    <div class="note-card" style="margin-top:0;">
+      <p><strong>Kenapa ikonnya "ganti-ganti"?</strong> Karena <em>mode</em> dan <em>status</em> dua hal berbeda. <strong>Long-press</strong> tombol Pilot = pindah mode <strong>ACC ↔ ICA</strong> (ikon ganti). Warna (abu/biru/putih) = status hidup-mati. Keduanya bikin tampilan MID berubah.</p>
+    </div>
+
+    <h3>Cara menyalakan ACC: 3 langkah</h3>
+    <div class="card" style="padding:20px;">
+      <ol style="margin:0;padding-left:20px;line-height:1.9;">
+        <li><strong>Short-press</strong> tombol <strong>Pilot</strong> (kiri setir) sekali → ACC <strong>ON</strong>, ikon muncul di MID (status <em>standby</em>, warna abu). Tekan lagi untuk mematikan.</li>
+        <li>Tekan <strong>Knob</strong> (roda di setir) → ACC <strong>aktif</strong>, ikon berubah <strong>biru</strong>.</li>
+        <li>Kecepatan target awal = kecepatan mobil saat diaktifkan. <strong>Jika mobil &lt; 30 km/jam (20 mph), target otomatis di-set 30 km/jam.</strong></li>
+      </ol>
+      <p class="muted-note mb-0">Pindah mode: <strong>long-press</strong> tombol Pilot untuk berganti antara <em>ACC</em> dan <em>ICA</em>.</p>
+    </div>
+
+    <h3>Mengatur jarak &amp; kecepatan</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Fungsi</th><th>Cara</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Jarak ikut (3 level)</strong></td><td>Geser <strong>Knob ke kanan</strong> = jarak lebih jauh; <strong>ke kiri</strong> = lebih dekat. Level muncul di MID. Makin tinggi kecepatan relatif, makin jauh jarak aman yang disarankan.</td></tr>
+        <tr><td><strong>Set kecepatan (pakai gas)</strong></td><td>Injak gas ke kecepatan yang diinginkan, lalu <strong>tekan Knob</strong> &amp; lepas gas → mobil cruise di kecepatan itu.</td></tr>
+        <tr><td><strong>Set kecepatan (tanpa gas)</strong></td><td>Geser <strong>Knob ke atas &amp; tahan</strong> = target naik; <strong>ke bawah &amp; tahan</strong> = target turun. Lepas saat angka yang diinginkan muncul di MID.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Override (ambil alih sementara)</h3>
+    <p>Saat ACC aktif, kamu tetap bisa <strong>injak gas</strong> untuk menyalip — kecepatan naik di atas target. Saat gas dilepas, mobil <strong>otomatis kembali ke kecepatan target</strong> ACC.</p>
+    <p class="warn">⚠️ Saat mode car-following, sebaiknya <strong>jangan memegang pedal gas</strong>. Jika pedal gas diaktifkan, ACC <em>tidak</em> akan mengerem otomatis — kendali ada di kaki kamu.</p>
+
+    <h3>Kapan ACC mati sendiri (auto deactivation)</h3>
+    <p>ACC akan berhenti otomatis dan kamu harus mengambil alih bila terjadi (antara lain):</p>
+    <ul style="columns:2;column-gap:32px;margin:12px 0 16px;">
+      <li>Injak pedal rem (saat tidak berhenti)</li>
+      <li>Pindah gigi keluar dari D</li>
+      <li>Buka sabuk pengaman</li>
+      <li>Injak gas lebih lama dari batas waktu</li>
+      <li>Buka pintu / bonnet / tailgate</li>
+      <li>Operasikan switch EPB</li>
+      <li>Ikut mobil berhenti &amp; waktu berhenti lewat batas</li>
+      <li>Kamera/radar terhalang atau sistem gagal</li>
+    </ul>
+
+    <div class="card" style="padding:16px;margin-bottom:16px;">
+      <p class="mb-0"><strong>⚠️ Jangan tinggalkan mobil saat ACC menahan berhenti.</strong> Sebelum keluar, selalu masuk gigi <strong>P</strong> dan matikan daya. Saat sistem menahan berhenti, kamu tetap harus siap mengerem manual — mobil bisa maju/mundur di tanjakan jika ACC dimatikan/dibatalkan.</p>
+    </div>
+
+    <h3>Reaktivasi setelah mati</h3>
+    <p>Setelah ACC mati dan ikon di MID berwarna <strong>putih</strong>, sistem siap diaktifkan lagi: geser <strong>Knob ke atas</strong> (atau tekan Knob) → ACC lanjut dengan <strong>kecepatan target lama</strong> yang masih tersimpan.</p>
+
+    <h3>Batasan &amp; kapan JANGAN dipakai</h3>
+    <p><strong>ACC bisa salah deteksi</strong> pada: kendaraan statis/menyebrang, pejalan kaki, sepeda motor, kendaraan bermuatan menonjol, truk kontainer tinggi, kendaraan di luar lajur, mobil yang menyalip (cut-in), atau saat kamu mendekat terlalu cepat ke kendaraan depan.</p>
+    <p><strong>Jangan pakai ACC saat:</strong></p>
+    <ul style="margin:12px 0 16px;">
+      <li>Cuaca buruk (hujan lebat, kabut)</li>
+      <li>Cahaya kurang / terlalu terang / lampu depan redup</li>
+      <li>Jalan kasar atau rusak, tanjakan/terjal curam</li>
+      <li>Area kerja/konstruksi jalan (roadworks)</li>
+      <li>Jalan licin (traksi rendah — risiko selip roda)</li>
+      <li>Ramp keluar/masuk jalan tol &amp; tikungan tajam</li>
+    </ul>
+    <p class="muted-note mb-0">ACC dirancang untuk <strong>jalan tol &amp; jalan mulus</strong> — tidak disarankan di jalan perkotaan atau pegunungan.</p>
+
+  </div>
+</section>
+
 <footer role="contentinfo">
   <div class="container">
     <p>MG S5 EV — Buku Panduan Komunitas Indonesia · <a href="index.html">Beranda</a></p>
