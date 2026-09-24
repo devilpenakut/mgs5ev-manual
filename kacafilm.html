@@ -44,11 +44,10 @@
       <span class="nav-badge">Indonesia</span>
     </div>
     <div class="nav-menu">
-      <input type="checkbox" id="nav-toggle-kacafilm" class="nav-toggle-input" aria-hidden="true">
-      <label for="nav-toggle-kacafilm" class="nav-toggle" aria-label="Buka navigasi">
+      <button type="button" id="nav-toggle-kacafilm" class="nav-toggle" aria-expanded="false" aria-controls="nav-links-kacafilm" aria-label="Buka navigasi">
         <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      </label>
-      <div class="nav-links">
+      </button>
+      <div class="nav-links" id="nav-links-kacafilm">
         <a href="index.html">Beranda</a>
         <a href="panduan.html">Panduan</a>
         <a href="peringatan.html">Peringatan</a>
@@ -188,7 +187,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VK Series" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>VK70</td><td class="accent-value">70%</td><td>94%</td><td>55%</td><td>&gt;99%</td><td>Depan (lolos tilang)</td></tr>
@@ -203,7 +202,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VIP dan X Series" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>VIP</td><td>15%</td><td>97%</td><td>73%</td><td>&gt;99%</td><td>Samping</td></tr>
@@ -218,7 +217,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi V-KOOL VRX Series" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>VRX60</td><td>58%</td><td>96%</td><td>53%</td><td>99%</td><td>Depan / Sunroof ✅</td></tr>
@@ -246,7 +245,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard LX Series" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>LX 70</td><td class="accent-value">72%</td><td>95%</td><td>55%</td><td>&gt;99%</td><td>Depan (lolos tilang) ⭐ paling terang</td></tr>
@@ -260,7 +259,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard Platinum Series" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>HP Quantum 37</td><td>38%</td><td>64%</td><td>48%</td><td>&gt;99%</td><td>Depan (entry)</td></tr>
@@ -276,7 +275,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Solar Gard Black Phantom" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>BP 50</td><td>52%</td><td>93%</td><td>&gt;99%</td><td>Depan / Sunroof ✅</td></tr>
@@ -303,7 +302,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Crystalline" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT (approx)</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT (approx)</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>CR70</td><td>~70%</td><td class="accent-value">97%</td><td>50%</td><td>99%</td><td>Depan (lolos tilang)</td></tr>
@@ -319,7 +318,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Black Beauty" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IR</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IR</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>BB 35</td><td>39%</td><td>39%</td><td>40%</td><td>99%</td><td>Depan / Sunroof</td></tr>
@@ -334,7 +333,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Black Chrome" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>BC 40</td><td>47%</td><td>99%</td><td>Depan</td></tr>
@@ -349,7 +348,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Obsidian" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>OB 70</td><td class="accent-value">78%</td><td>23%</td><td>99%</td><td>Depan (sangat terang)</td></tr>
@@ -367,7 +366,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi 3M Color Stable" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>CS 50</td><td>35%</td><td>99%</td><td>Depan</td></tr>
@@ -397,7 +396,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Ultra" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IRR (940)</th><th>IRR (1400)</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IRR (940)</th><th scope="col">IRR (1400)</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>Ultra 05</td><td>5%</td><td class="accent-value">97%</td><td class="accent-value">99%</td><td class="accent-value">81%</td><td>99%</td><td>Samping (super adem)</td></tr>
@@ -412,7 +411,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Premium" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IRR (940)</th><th>IRR (1400)</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IRR (940)</th><th scope="col">IRR (1400)</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>Premium 05</td><td>6%</td><td>93%</td><td>97%</td><td>71%</td><td>99%</td><td>Samping</td></tr>
@@ -428,7 +427,7 @@
       <div class="table-wrap" role="region" aria-label="Spesifikasi Kori Classic" tabindex="0">
         <table>
           <thead>
-            <tr><th>Varian</th><th>VLT</th><th>IRR (940)</th><th>IRR (1400)</th><th>TSER</th><th>UVR</th><th>Cocok</th></tr>
+            <tr><th scope="col">Varian</th><th scope="col">VLT</th><th scope="col">IRR (940)</th><th scope="col">IRR (1400)</th><th scope="col">TSER</th><th scope="col">UVR</th><th scope="col">Cocok</th></tr>
           </thead>
           <tbody>
             <tr><td>Classic 05</td><td>6%</td><td>90%</td><td>90%</td><td>67%</td><td>99%</td><td>Samping</td></tr>
@@ -457,11 +456,11 @@
         <table>
           <thead>
             <tr>
-              <th>Merek</th>
-              <th>IR Tertinggi</th>
-              <th>TSER Tertinggi</th>
-              <th>Tilang Aman?</th>
-              <th>Sinyal Aman</th>
+              <th scope="col">Merek</th>
+              <th scope="col">IR Tertinggi</th>
+              <th scope="col">TSER Tertinggi</th>
+              <th scope="col">Tilang Aman?</th>
+              <th scope="col">Sinyal Aman</th>
             </tr>
           </thead>
           <tbody>

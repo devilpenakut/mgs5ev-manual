@@ -43,11 +43,10 @@
       <span class="nav-badge">Indonesia</span>
     </div>
     <div class="nav-menu">
-      <input type="checkbox" id="nav-toggle-index" class="nav-toggle-input" aria-hidden="true">
-      <label for="nav-toggle-index" class="nav-toggle" aria-label="Buka navigasi">
+      <button type="button" id="nav-toggle-index" class="nav-toggle" aria-expanded="false" aria-controls="nav-links-index" aria-label="Buka navigasi">
         <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      </label>
-      <div class="nav-links">
+      </button>
+      <div class="nav-links" id="nav-links-index">
         <a href="index.html" class="active">Beranda</a>
         <a href="panduan.html">Panduan</a>
         <a href="peringatan.html">Peringatan</a>
@@ -145,10 +144,10 @@
       <table>
         <thead>
           <tr>
-            <th>Spesifikasi</th>
-            <th class="center">Ignite</th>
-            <th class="center">Magnify</th>
-            <th class="center">Magnify Max*</th>
+            <th scope="col">Spesifikasi</th>
+            <th class="center" scope="col">Ignite</th>
+            <th class="center" scope="col">Magnify</th>
+            <th class="center" scope="col">Magnify Max*</th>
           </tr>
         </thead>
         <tbody>

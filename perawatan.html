@@ -43,11 +43,10 @@
       <span class="nav-badge">Indonesia</span>
     </div>
     <div class="nav-menu">
-      <input type="checkbox" id="nav-toggle-perawatan" class="nav-toggle-input" aria-hidden="true">
-      <label for="nav-toggle-perawatan" class="nav-toggle" aria-label="Buka navigasi">
+      <button type="button" id="nav-toggle-perawatan" class="nav-toggle" aria-expanded="false" aria-controls="nav-links-perawatan" aria-label="Buka navigasi">
         <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-      </label>
-      <div class="nav-links">
+      </button>
+      <div class="nav-links" id="nav-links-perawatan">
         <a href="index.html">Beranda</a>
         <a href="panduan.html">Panduan</a>
         <a href="peringatan.html">Peringatan</a>
@@ -135,9 +134,9 @@
       <table>
         <thead>
           <tr>
-            <th>Komponen</th>
-            <th>Tipe Baterai</th>
-            <th>Catatan</th>
+            <th scope="col">Komponen</th>
+            <th scope="col">Tipe Baterai</th>
+            <th scope="col">Catatan</th>
           </tr>
         </thead>
         <tbody>

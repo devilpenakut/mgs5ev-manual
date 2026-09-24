@@ -45,7 +45,9 @@
     var close = document.getElementById("search-modal-close");
     if (!modal) return;
 
-    function open() {
+    var lastTrigger = null;
+    function open(trigger) {
+      lastTrigger = trigger || null;
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
       var input = modal.querySelector(".pagefind-ui__search-input");
@@ -56,17 +58,45 @@
       modal.classList.remove("open");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
+      if (lastTrigger && typeof lastTrigger.focus === "function") lastTrigger.focus();
+      lastTrigger = null;
     }
 
     openers.forEach(function (b) {
+      b.setAttribute("aria-expanded", "false");
       b.addEventListener("click", function (e) {
         e.preventDefault();
-        open();
+        b.setAttribute("aria-expanded", "true");
+        open(b);
       });
     });
     if (close) close.addEventListener("click", closeModal);
     modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        openers.forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+        closeModal();
+      }
+      if (e.key === "Tab" && modal.classList.contains("open")) {
+        var focusables = modal.querySelectorAll("button, a[href], input, [tabindex]:not([tabindex='-1'])");
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    });
+    openers.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var menu = document.querySelector(".nav-menu.open");
+        if (menu) { menu.classList.remove("open"); }
+        var navBtn = document.querySelector(".nav-toggle[aria-expanded='true']");
+        if (navBtn) navBtn.setAttribute("aria-expanded", "false");
+      });
+    });
   }
 
   // Load assets then boot
