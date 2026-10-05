@@ -99,6 +99,26 @@
     });
   }
 
+  // Mobile nav: hamburger button toggles .nav-menu.open
+  function setNav(btn, open) {
+    btn.closest(".nav-menu").classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "Tutup navigasi" : "Buka navigasi");
+  }
+  document.querySelectorAll(".nav-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      setNav(btn, btn.getAttribute("aria-expanded") !== "true");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    var btn = document.querySelector(".nav-toggle[aria-expanded='true']");
+    if (btn && !btn.closest(".nav-menu").contains(e.target)) setNav(btn, false);
+  });
+  document.addEventListener("keydown", function (e) {
+    var btn = document.querySelector(".nav-toggle[aria-expanded='true']");
+    if (e.key === "Escape" && btn) { setNav(btn, false); btn.focus(); }
+  });
+
   // Load assets then boot
   loadCss("pagefind/pagefind-ui.css");
   loadCss("search.css");
